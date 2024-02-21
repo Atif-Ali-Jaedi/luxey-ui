@@ -1,8 +1,37 @@
-# React + Vite
+<div style="display:flex;align-items:center;flex-direction:column;gap:1em">
+<img src="./public/luxeyui.png" alt="luxeyUI Logo" width="64"/>
+<img src="https://img.shields.io/npm/l/luxeyui?style=flat" alt="License"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# LuxeyUI
 
-Currently, two official plugins are available:
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+LuxeyUI is a tailwindCSS UI component library built on top of PostCSS and
+TypeScript for basic use. It features components inspired by
+[shadcn-ui](https://ui-shadcn.com) and [@nextui-org](https://nextui.org),
+tailored for non-react use.
+
+> **Note:** This project is currently under development. Expect more components
+> to be added in the future. Stay tuned! 😀
+
+## Getting Started
+
+To kick off, use the CDN for now since the components aren't usable
+individually. Full functionality will be available after the 1st full release.
+Utilize the Tailwind CDN for better customization.
+
+```html 
+<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/luxeyui@0.2.1/dist/all.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxeyui@0.2.1/dist/all.min.js" defer></script>
+```
+
+## Documentation
+
+For comprehensive documentation, visit
+[https://luxeyui.vercel.app](https://luxeyui.vercel.app).
+
+## License
+
+Licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
