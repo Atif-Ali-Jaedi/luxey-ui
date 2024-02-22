@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Button from "../../components/ui/Button";
 import github from "../../assets/icons/github.svg";
+import {currentVersion} from "../../data/constants"
 const Home = () => {
 	const container = useRef(null);
 	const fadeFromTop = [
@@ -32,7 +33,7 @@ const Home = () => {
 					id="latest-version"
 					className="chip dot primary pr-0 dark:!text-white mb-2 dark:!border-zinc-500"
 				>
-					<span>Luxey 0.2.1 is here! 🚀</span>
+					<span>LuxeyUI {currentVersion} is here! 🚀</span>
 				</div>
 				<h1 className="text-4xl md:text-5xl font-bold text-center mb-3 dark:text-gray-100">
 					Make Websites{" "}
