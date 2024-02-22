@@ -59,4 +59,6 @@ const faqs = [
 	}
 ];
 
-export { sidebarLinks, navLinks, components, faqs };
+const currentVersion = "0.2.3";
+
+export { sidebarLinks, navLinks, components, faqs, currentVersion };

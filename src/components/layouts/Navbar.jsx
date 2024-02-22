@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import SearchBox from "../ui/SearchBox";
-import { navLinks } from "../../data/constants";
+import { navLinks, currentVersion } from "../../data/constants";
 import Button from "../ui/Button";
 import { useTheme, useToggleTheme } from "../../ThemeContext";
-
 import sun from "../../assets/icons/sun.svg";
 import moon from "../../assets/icons/moon.svg";
 import github from "../../assets/icons/github.svg";
@@ -27,7 +24,7 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 	window.addEventListener("scroll", () =>
 		window.scrollY >= 5 ? setScrolled(true) : setScrolled(false)
 	);
-	
+
 	return (
 		<>
 			<nav
@@ -52,8 +49,8 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 						<img src="/luxeyui.png" width="28" />
 						<h3 className="h3">Luxeyui</h3>
 					</Link>
-					<div className="bg-gray-100 dark:bg-zinc-700 px-3 pt-1.5 pb-1 dark:text-white rounded-full text-xs">
-						v 0.2.1
+					<div className="bg-gray-100 dark:bg-zinc-700 px-3 pt-1.5 pb-1 dark:text-white rounded-full shadow-[0_4px_8px_rgba(5,10,15,0.05)] dark:shadow-[0_4px_8px_rgba(230,240,250,0.2)] text-xs">
+						v {currentVersion}
 					</div>
 				</div>
 				<ul className="hidden md:flex items-center gap-6 ml-3 [&_a.active]:font-medium [&_a.active]:text-black dark:[&_a.active]:text-zinc-200">

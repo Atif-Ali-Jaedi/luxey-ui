@@ -44,7 +44,7 @@ const CodePreview = ({ code }) => {
 					<div className="border rounded mt-2 border-gray-300 dark:border-zinc-800">
 						<div className="relative px-5 py-6 overflow-x-scroll">
 							<iframe
-								srcDoc={`<!DOCTYPE html><html lang="en" dir="ltr" class="${document.documentElement.className}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@0.2.0/dist/all.min.css"/><script src="https://cdn.tailwindcss.com"></script><script src="https://cdn.jsdelivr.net/npm/luxeyui@0.2.0/dist/all.min.js" defer></script><style>::-webkit-scrollbar{display:none}</style><script>tailwind.config = {darkMode: "class"}</script></head><body>${code.code}</body></html>`}
+								srcDoc={`<!DOCTYPE html><html lang="en" dir="ltr" class="${document.documentElement.className}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@0.2.3/dist/all.min.css"/><script src="https://cdn.tailwindcss.com"></script><script src="https://cdn.jsdelivr.net/npm/luxeyui@0.2.3/dist/all.min.js" defer></script><style>::-webkit-scrollbar{display:none}</style><script>tailwind.config = {darkMode: "class"}</script></head><body>${code.code}</body></html>`}
 								frameBorder="0"
 								className="w-full frame"
 							/>

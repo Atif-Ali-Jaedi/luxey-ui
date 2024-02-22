@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Breadcrumbs } from "../../utils/Breadcrumbs";
+import { currentVersion } from "../../data/constants";
 
 const Timeline = lazy(() =>
 	import("../../components/ui/Timeline.jsx").then(module => {
@@ -44,10 +45,10 @@ const Installation = () => {
 							text: "Add the stylesheet and the script inside the head tag, as following. Note that the script should be before every scripts you use and the defer attribute won't be needed if you add before the end of the body tag.",
 							code: {
 								lang: "html",
-								code: `<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/luxeyui@0.2.1/dist/all.min.css" />
+								code: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
 <!-- Utilize the Tailwind CDN for better customization -->
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/luxeyui@0.2.1/dist/all.min.js" defer></script>`
+<script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>`
 							}
 						},
 						{

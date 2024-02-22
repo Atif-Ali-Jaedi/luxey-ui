@@ -18,8 +18,6 @@ const Chip = () => {
 				<CodePreview code={{ lang: "html", code: chipCodes.sizes }} />
 				<h3 className="h3">Colors</h3>
 				<CodePreview code={{ lang: "html", code: chipCodes.colors }} />
-				<h3 className="h3">Colors</h3>
-				<CodePreview code={{ lang: "html", code: chipCodes.colors }} />
 				<h3 className="h3">Radius</h3>
 				<CodePreview code={{ lang: "html", code: chipCodes.radius }} />
 				<h3 className="h3">Variants</h3>

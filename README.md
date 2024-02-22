@@ -1,11 +1,8 @@
-<div style="display:flex;align-items:center;flex-direction:column;gap:1em">
 <img src="./public/luxeyui.png" alt="luxeyUI Logo" width="64"/>
+<br/>
 <img src="https://img.shields.io/npm/l/luxeyui?style=flat" alt="License"/>
 
 # LuxeyUI
-
-</div>
-
 
 LuxeyUI is a tailwindCSS UI component library built on top of PostCSS and
 TypeScript for basic use. It features components inspired by

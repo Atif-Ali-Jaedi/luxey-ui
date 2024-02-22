@@ -23,7 +23,7 @@ export const cardCodes = {
     </div>
     <div class="card-footer">
       <small>Dont have an account? 
-        <a href="#" class="text-[#006fee]">Sign up</a>
+        <a class="text-[#006fee]">Sign up</a>
       </small>
     </div>
   </div>

@@ -9,13 +9,13 @@ const Changelog = () => {
 				<h1 className="h1 !font-bold dark:text-white mt-2 mb-4">Changelog</h1>
 				<p className="text-zinc-500 dark:text-zinc-400">
 					Here, you can find all the changes that have been made for each
-					versions.
+					versions. But super small updates won't be listed here.
 				</p>
 			</article>
 			<article className="dark:text-zinc-50 pb-8 mb-4 border-b border-zinc-600">
 				<Changes
 					version="0.2.1"
-					date="February 5, 2024"
+					date="February 21, 2024"
 					heading="Improved collections & fixed components & website"
 					text="Big update. Although added only 5 components, and fixed 2 components, added an entire website for showcase."
 				>

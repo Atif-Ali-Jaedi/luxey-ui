@@ -7,10 +7,7 @@ export const skeletonCodes = {
   </div>
 </div>`,
 	eg: `<div class="flex flex-col gap-2 px-6 w-full">
-  <div 
-    class="skeleton max-w-sm h-32 rounded-xl" 
-    style="background-size: 800px 100%"
-  ></div>
+  <div class="skeleton max-w-sm h-32 rounded-xl"></div>
   <div class="skeleton max-w-sm h-4 rounded-xl mt-2"></div>
   <div class="skeleton w-48 h-4 rounded-xl"></div>
 </div>`
