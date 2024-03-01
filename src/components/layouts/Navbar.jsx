@@ -73,7 +73,6 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 					<Button
 						className="p-1.5 rounded"
 						onClick={() => {
-							window.location.pathname !== "/" && location.reload();
 							toggle();
 						}}
 					>
