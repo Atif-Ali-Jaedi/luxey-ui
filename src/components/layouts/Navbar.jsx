@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import SearchBox from "../ui/SearchBox";
-import { navLinks, currentVersion } from "../../data/constants";
-import Button from "../ui/Button";
-import { useTheme, useToggleTheme } from "../../ThemeContext";
-import sun from "../../assets/icons/sun.svg";
-import moon from "../../assets/icons/moon.svg";
-import github from "../../assets/icons/github.svg";
-import search from "../../assets/icons/search.svg";
+import { Button } from "../ui/Button";
+import { navLinks, currentVersion } from "@/data/js/constants";
+import { useTheme, useToggleTheme } from "@/ThemeContext";
+import { Search, Sun, Moon, Github } from "lucide-react";
 
-const Navbar = ({ togglerOnClick, sidebarToggle }) => {
+export const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 	const [active, setActive] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 
@@ -22,16 +19,16 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 	};
 
 	window.addEventListener("scroll", () =>
-		window.scrollY >= 5 ? setScrolled(true) : setScrolled(false)
+		window.scrollY >= 2.5 ? setScrolled(true) : setScrolled(false)
 	);
 
 	return (
 		<>
 			<nav
 				id="navbar"
-				className={`backdrop-blur transition-all duration-300 px-5 py-3 flex sm:px-6 md:px-8 items-center justify-between sticky top-0 z-[2] dark:border-b-gray-950 ${
+				className={`backdrop-blur-[20px] px-6 py-3 flex sm:px-6 md:px-8 items-center justify-between sticky top-0 z-[3] md:z-[5] dark:border-b-gray-950 ${
 					scrolled &&
-					"bg-white/95 supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/50 border-b"
+					"bg-white/70 dark:bg-black/60 duration-0 border-b lg:rounded-2xl"
 				}`}
 			>
 				<div className="flex items-center gap-2.5">
@@ -40,16 +37,16 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 							<div
 								key={i}
 								className={`${
-									i === 1 ? "w-2.5" : i === 2 ? "w-3.5" : "w-full"
+									i === 1 ? "w-full" : i === 2 ? "w-3" : "w-4"
 								} h-[1.5px] bg-gray-900 mb-[0.3em] rounded-sm dark:bg-gray-50`}
 							></div>
 						))}
 					</div>
-					<Link to="/" className="flex items-center gap-1 dark:text-gray-50">
-						<img src="/luxeyui.png" width="28" />
-						<h3 className="h3">Luxeyui</h3>
+					<Link to="/" className="flex items-end dark:text-gray-50">
+						<img src="/logo.png" width="24" />
+						<h3 className="text-2xl font-semibold">uxeyUI</h3>
 					</Link>
-					<div className="bg-gray-100 dark:bg-zinc-700 px-3 pt-1.5 pb-1 dark:text-white rounded-full shadow-[0_4px_8px_rgba(5,10,15,0.05)] dark:shadow-[0_4px_8px_rgba(230,240,250,0.2)] text-xs">
+					<div className="hidden md:block bg-gray-100 dark:bg-zinc-700 px-3 pt-1.5 pb-1 dark:text-white rounded-full shadow-[0_4px_8px_rgba(5,10,15,0.05)] dark:shadow-[0_4px_8px_rgba(230,240,250,0.1)] text-xs">
 						v {currentVersion}
 					</div>
 				</div>
@@ -67,33 +64,44 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 					))}
 				</ul>
 				<div className="flex items-center translate-x-2">
-					<Button className="p-1.5 rounded" onClick={handleActive}>
-						<img src={search} className="w-5 dark:invert" />
-					</Button>
 					<Button
-						className="p-1.5 rounded"
-						onClick={() => {
-							toggle();
-						}}
+						onClick={handleActive}
+						variant="light"
+						className="p-1.5 md:px-3 md:py-2 md:bg-zinc-200 md:flex md:rounded-xl dark:md:bg-zinc-800"
 					>
-						<img src={currentMode ? sun : moon} className="w-5" />
+						<Search
+							className="w-5 dark:stroke-white md:dark:stroke-zinc-500"
+							absoluteStrokeWidth
+						/>
+						<span className="hidden md:block text-gray-400 text-xs pr-6 dark:text-zinc-600">
+							Search...
+						</span>
+						<span className="absolute md:flex items-center justify-center text-xs bg-white w-6 h-5 rounded-lg shadow right-2 hidden dark:bg-zinc-700/50 dark:text-zinc-500">
+							<span className="text-[0.5rem] -translate-y-0.5">^</span>K
+						</span>
 					</Button>
-					<Button className="p-1.5 rounded">
-						<a
-							rel="nofollow noreferrer"
-							href="https://github.com/Atif-Ali-Jaedi/luxeyui"
-							className="dark:invert"
-							target="_blank"
-						>
-							<img src={github} />
-						</a>
+					<Button variant="light" className="p-1.5" onClick={() => toggle()}>
+						{currentMode ? (
+							<Sun width="20" absoluteStrokeWidth />
+						) : (
+							<Moon width="20" absoluteStrokeWidth />
+						)}
 					</Button>
+					<a
+						rel="nofollow noreferrer"
+						href="https://github.com/Atif-Ali-Jaedi/luxeyui"
+						target="_blank"
+					>
+						<Button variant="light" className="p-1.5 rounded">
+							<Github width="20" absoluteStrokeWidth />
+						</Button>
+					</a>
 				</div>
 			</nav>
 			<div
-				className={`fixed inset-0 z-[2] transition-all duration-300 md:z-[4] ${
+				className={`fixed inset-0 z-[3] transition-all duration-300 md:z-[4] ${
 					sidebarToggle || active
-						? "bg-black/50 pointer-events-auto"
+						? "bg-black/30 pointer-events-auto"
 						: "bg-transparent pointer-events-none"
 				}`}
 				onClick={sidebarToggle ? togglerOnClick : handleActive}
@@ -102,5 +110,3 @@ const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 		</>
 	);
 };
-
-export default Navbar;

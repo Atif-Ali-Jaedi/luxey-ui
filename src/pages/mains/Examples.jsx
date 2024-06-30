@@ -6,11 +6,10 @@ const Examples = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Examples"]} />
-			<article className="article">
-				<h1 className="h1">Examples</h1>
-				<p className="lead">
-					Some examples which are crafted with the help of luxeyui.
-				</p>
+			<article className="prose lg:prose-lg dark:prose-invert">
+				<h1 className="my-4">Examples</h1>
+				<p>Some examples which are crafted with the help of luxeyui.</p>
+			</article>
 				<CodePreview
 					code={{
 						lang: "html",
@@ -25,7 +24,6 @@ const Examples = () => {
 						code: examples.selectPlan
 					}}
 				/>
-			</article>
 		</>
 	);
 };

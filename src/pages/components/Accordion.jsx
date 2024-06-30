@@ -7,15 +7,15 @@ const Accordion = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Components", "Accordion"]} />
-			<article className="article">
-				<h1 className="h1">Accordion</h1>
-				<p className="lead">
+			<article className="prose lg:prose-lg dark:prose-invert [&_li>span]:text-pink-500 [&_li>span]:font-medium dark:[&_li>span]:text-sky-500 [&_span.class]:text-pink-500 [&_span.class]:font-medium dark:[&_span.class]:text-sky-500">
+				<h1 className="my-4">Accordion</h1>
+				<p>
 					Accordion is a type of menu that displays a list of headers stacked on
 					top of one another. When clicked on, these headers will either reveal
 					or hide associated content.
 				</p>
-				<h3 className="h3">Slots</h3>
-				<ul className="ul">
+				<h3>Slots</h3>
+				<ul>
 					<li>
 						<span>accordions</span>: The list of accordions or the wrapper.
 					</li>
@@ -35,7 +35,7 @@ const Accordion = () => {
 					set to work if it has accordions inside it yet.
 				</blockquote>
 				<br />
-				<h3 className="h3">Usage</h3>
+				<h3>Usage</h3>
 				<CodePreview
 					code={{
 						lang: "html",
@@ -53,7 +53,7 @@ const Accordion = () => {
 					to be able to animate the anchor icon as your wish.
 				</blockquote>
 				<br />
-				<h3 className="h3">Expand single items</h3>
+				<h3>Expand single items</h3>
 				<p>
 					If you set the <span className="class">`data-selection-mode`</span> to{" "}
 					<span className="class">`single`</span>, then only one accordion can
@@ -66,7 +66,7 @@ const Accordion = () => {
 						code: accordionCodes.expandSingleItems
 					}}
 				/>
-				<h3 className="h3">Disabled Accordion(s)</h3>
+				<h3>Disabled Accordion(s)</h3>
 				<p>
 					Give the <span className="class">`data-disabled`</span> attribute to
 					make accordion(s) disabled.
@@ -78,7 +78,7 @@ const Accordion = () => {
 						code: accordionCodes.disabledAccordion
 					}}
 				/>
-				<h3 className="h3">Customization</h3>
+				<h3>Customization</h3>
 				<p>Customization is very easy, here's an example.</p>
 				<CodePreview
 					code={{

@@ -1,22 +1,25 @@
-import { Routes, Route, Outlet, useNavigate } from "react-router-dom";
+import {
+	Routes,
+	Route,
+	Outlet,
+	useNavigate,
+	useLocation
+} from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense, useEffect, useState } from "react";
 import Home from "./pages/mains/Home";
-const Introduction = lazy(() => import("./pages/mains/Introduction.jsx"));
-const Installation = lazy(() => import("./pages/mains/Installation.jsx"));
-const Theme = lazy(() => import("./pages/mains/Theme.jsx"));
-const Changelog = lazy(() => import("./pages/mains/Changelog.jsx"));
-const Typography = lazy(() => import("./pages/mains/Typography.jsx"));
-const Examples = lazy(() => import("./pages/mains/Examples.jsx"));
+import Blogs from "./pages/mains/Blogs";
 
-import Navbar from "./components/layouts/Navbar";
-import Sidebar from "./components/layouts/Sidebar";
+import { Footer, Navbar, Sidebar, BlogPost, CTA } from "@/components";
 
 import { GoToTopBtn } from "./utils/GoToTopBtn";
-import { components } from "./pages";
+import { components, docs } from "./pages/pages";
 import ThemeProvider from "./ThemeContext";
+import { mdxComponents } from "@/data/jsx/MDXComponents";
 
 const App = () => {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const [toggle, setToggle] = useState(false);
 	useEffect(() => {
 		if (
@@ -29,65 +32,97 @@ const App = () => {
 		setToggle(prev => !prev);
 		document.body.classList.toggle("overflow-y-hidden");
 	};
+
+	const checkSpecificLocations = () => {
+		const specificRoutes = ["/", "/blog"];
+		return specificRoutes.some(
+			route =>
+				new RegExp(`^${route.replace(/:\w+/, "\\w+")}$`).test(
+					location.pathname
+				) || location.pathname.startsWith("/blog")
+		);
+	};
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
 	return (
-		<ThemeProvider>
-			<Navbar sidebarToggle={toggle} togglerOnClick={handleToggle} />
-			<main
-				className={
-					window.location.pathname !== "/" &&
-					"md:grid md:grid-cols-[16em_calc(100%-16em)] min-h-[100svh]"
-				}
-			>
-				<Sidebar isActive={toggle} onClose={handleToggle} />
-				<section className="pt-8 px-6">
-					<Routes>
-						<Route
-							path="/"
-							element={
-								<Suspense
-									fallback={
-										<p className="dark:text-zinc-300 mt-4 ml-5">Loading...</p>
-									}
-								>
-									<Outlet />
-								</Suspense>
-							}
-						>
-							<Route path="/" element={<Home />} />
-							<Route path="docs">
-								<Route index element={<Introduction />} />
-								<Route path="installation" element={<Installation />} />
-								<Route path="theme" element={<Theme />} />
-								<Route path="typography" element={<Typography />} />
-								<Route path="examples" element={<Examples />} />
-								<Route path="changelog" element={<Changelog />} />
-								<Route path="components">
-									{components.map(c => (
-										<Route key={c.id} path={c.path} element={<c.element />} />
+		<HelmetProvider>
+			<ThemeProvider>
+				<Navbar sidebarToggle={toggle} togglerOnClick={handleToggle} />
+				<main
+					className={
+						checkSpecificLocations()
+							? "main"
+							: "md:grid md:grid-cols-[16em_calc(100%-16em)]"
+					}
+				>
+					<Sidebar
+						isActive={toggle}
+						onClose={handleToggle}
+						onSpecificLocations={checkSpecificLocations()}
+					/>
+					<section className="pt-8 px-6">
+						<Routes>
+							<Route
+								path="/"
+								element={
+									<Suspense
+										fallback={
+											<p className="dark:text-zinc-300 mt-4 ml-5">Loading...</p>
+										}
+									>
+										<Outlet />
+									</Suspense>
+								}
+							>
+								<Route path="/" element={<Home />} />
+								<Route path="blog">
+									<Route index element={<Blogs />} />
+									<Route path=":name" element={<BlogPost />} />
+								</Route>
+								<Route path="docs">
+									{docs.map(d => (
+										<Route
+											key={d.id}
+											path={d.path}
+											index={d.index}
+											element={<d.element components={mdxComponents} />}
+										/>
 									))}
+									<Route path="components">
+										{components.map(c => (
+											<Route key={c.id} path={c.path} element={<c.element />} />
+										))}
+									</Route>
 								</Route>
 							</Route>
-						</Route>
-					</Routes>
-					{window.location.pathname !== "/" && <article className="author text-sm dark:text-gray-300 text-gray-500 pt-2 pb-8 leading-6 flex justify-center">
-						<p className="w-[40ch] text-center">
-							Built by{" "}
-							<a
-								rel="nofollow noreferrer"
-								target="_blank"
-								href="https://twitter.com/atif_ali_jaedi"
-								className="block link underline underline-always"
-							>
-								Atif Ali Jaedi
-							</a>
-							. Note that this project & website is under development.
-						</p>
-					</article>
-					}
-				</section>
-			</main>
-			<GoToTopBtn />
-		</ThemeProvider>
+						</Routes>
+					</section>
+				</main>
+				{checkSpecificLocations() && (
+					<>
+						<CTA /> <Footer />
+					</>
+				)}
+				<div className="flex items-center flex-wrap text-gray-400 justify-center text-center sm:justify-between mb-6 px-6 md:px-10">
+					<small>Copyright © LuxeyUI 2024 All rights reserved.</small>
+					<small className="flex">
+						Built by&nbsp;
+						<a
+							rel="nofollow noreferrer"
+							target="_blank"
+							href="https://twitter.com/atif_ali_jaedi"
+							className="block link no-underline !text-gray-500 dark:!text-gray-300"
+						>
+							Atif Ali Jaedi
+						</a>
+						.
+					</small>
+				</div>
+				<GoToTopBtn />
+			</ThemeProvider>
+		</HelmetProvider>
 	);
 };
 

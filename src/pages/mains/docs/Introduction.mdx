@@ -1,0 +1,24 @@
+import { Accordion } from "@/components/ui/Accordion";
+import { faqs } from "@/data/js/constants";
+
+<BCrumbs data={["Docs", "Introduction"]} />
+<Article>
+# Introduction
+
+Easily create stunning user interfaces using our Tailwind CSS and TypeScript UI library. Best for websites, challenges, and more.
+
+<SM>This UI library is under <strong>Development</strong>. It will take some time to finish builidng the whole library and this website. Note that, this is an early access.</SM>
+
+### Well, then why and what is it for?
+
+I've made this UI library because, nowadays almost every good and modern UI library is for react, vue etc. They don't support basic uses, like for challenges or normal web desigining purposes.
+
+To use the components, use the CDN for now, because it is not optimized for installing the library yet. Also huge thanks to <ELink href="https://nextui.org" text="NextUI"/> and <ELink href="https://ui.shadcn.com" text="Shadcn/UI"/> for inspiring me to make this library. I would highly recommend you to check those out if you're looking for UI libraries for especially like react.
+
+## FAQs
+
+<Accordion data={faqs} />
+
+<CompsLinks next={{ link: "./installation", text: "Installation" }} />
+
+</Article>

@@ -1,0 +1,118 @@
+import { Timeline } from "@/components";
+import { currentVersion } from "@/data/js/constants";
+
+After months of anticipation and user requests, I'm thrilled to announce the arrival of Dark Mode in our UI Library! This long-awaited feature is designed to enhance your development experience and make your applications more user-friendly, especially in low-light environments.
+
+### Why Dark Mode?
+
+Dark Mode isn't just a trendy feature; it offers several practical benefits:
+
+- <HL>Reduced Eye Strain</HL>: Darker interfaces can be gentler on the eyes,
+  especially in dimly lit settings or during extended periods of screen time.
+- <HL>Improved Battery Life</HL>: On OLED and AMOLED screens, dark themes can
+  save energy and extend battery life.
+- <HL>Enhanced Focus</HL>: Dark interfaces can help reduce distractions, making
+  it easier to concentrate on your work.
+
+### What Took Me So Long?
+
+You might be wondering why it took me so long to roll out this feature. Here’s a peek behind the scenes:
+
+1. <HL>Comprehensive Design Overhaul</HL>: Implementing Dark Mode isn’t just
+   about changing a few colors. It required a thorough review of our entire
+   component library to ensure consistency and visual harmony.
+2. <HL>User-Centric Approach</HL>: I gathered extensive feedback from our
+   community to understand their needs and preferences for Dark Mode. This
+   feedback was crucial in guiding our design and development process.
+3. <HL>Performance Optimization</HL>: I wanted to ensure that Dark Mode runs
+   seamlessly without affecting the performance of your applications. This
+   involved rigorous testing and optimization.
+
+### Key Features of Our Dark Mode
+
+- <HL>Seamless Toggle</HL>: Easily switch between Light and Dark Modes with a
+  single click or programmatically through our API.
+- <HL>Automatic Detection</HL>: Our library can detect system-level dark mode
+  settings and adapt accordingly.
+- <HL>Customizable Themes</HL>: While our default Dark Mode is sleek and
+  polished, you have full control to customize it to match your brand’s
+  aesthetics.
+- <HL>Consistent Across Components</HL>: From buttons to modals, every component
+  has been carefully adapted to provide a cohesive look and feel in Dark Mode.
+
+### How to Get Started
+
+Enabling Dark Mode in your projects is straightforward:
+
+<Timeline
+  data={[
+    {
+      id: 1,
+      heading: "Update the library",
+      text: "Ensure you are using the latest version of our UI Library.",
+      code: {
+        lang: "html",
+        code: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>`,
+      },
+    },
+    {
+      id: 2,
+      heading: "Enable Dark Mode",
+      html: `To enable dark mode, please add thhis code <code class="code before:content-[''] after:content-['']">darkMode: 'class'</code> in your <code class="code before:content-[''] after:content-['']">tailwind.config.js</code> file.`,
+      code: {
+        lang: "js",
+        code: `export default { darkMode: "class" }
+tailwind.config = { darkMode: "class" } // For CDN
+`,
+      },
+    },
+    {
+      id: 3,
+      heading: "Customize as Needed",
+      html: `Modify your css file to tweak the Dark Mode to suit your design needs. An example given below. Make sure to use <code class="code">hsla</code> format and without the parenthesis and <code class="code">hsla</code> to customize the colors.`,
+      code: {
+        lang: "css",
+        code: `html.dark {
+	--base-primary: 188.6 100% 46.7%;
+	--content-4: 0 0% 99.6%;
+}`,
+      },
+    },
+    {
+      id: 4,
+      heading: "Add the toggle functionality",
+      text: "Now all you have to do is to make a functionality for toggling dark mode. For example:",
+      code: {
+        lang: "html",
+        code: `<input type="checkbox" id="toggler" class="switch" />
+<script>
+  document
+		.querySelector("#toggler")
+		.addEventListener(
+			"click",
+			e =>
+				(document.documentElement.className = e.target.checked
+					? "dark"
+					: "")
+		);
+</script>`,
+      },
+    },
+  ]}
+/>
+
+### What's Next?
+
+Our commitment to enhancing your development experience doesn’t stop here. I'm already working on new features and improvements based on your feedback. Here’s what you can expect soon:
+
+- <HL>More Theme Options</HL>: I plan to introduce more predefined themes and
+  customization options.
+- <HL>Performance Enhancements</HL>: Continued focus on optimizing performance
+  across all components.
+- <HL>New Components</HL>: Expanding our library with new components and
+  utilities to make your development faster and easier.
+
+Thank you for being a part of our journey. I'm excited to see how you will leverage Dark Mode to create stunning and accessible user interfaces.
+
+**Happy Coding!** 🎉

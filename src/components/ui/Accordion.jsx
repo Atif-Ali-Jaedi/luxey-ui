@@ -1,5 +1,5 @@
 import { useState } from "react";
-import chevronRight from "../../assets/icons/chevron-right.svg";
+import {ChevronLeft} from "lucide-react"
 
 export const Accordion = ({ data }) => {
 	const [openAccordions, setOpenAccordions] = useState(
@@ -26,12 +26,11 @@ export const Accordion = ({ data }) => {
 						className="flex items-center justify-between"
 					>
 						<strong className="font-medium w-[30ch]">{d.question}</strong>
-						<img
-							src={chevronRight}
-							className={`scale-[-1] w-5 transition-all duration-300 ${
+						<ChevronLeft
+							className={`w-5 transition-all duration-300 ${
 								openAccordions[index] ? "-rotate-90" : ""
 							}`}
-						></img>
+						/>
 					</div>
 					<div
 						className={`transition-all duration-500 ease-in-out overflow-hidden ${

@@ -1,4 +1,4 @@
-<img src="./public/luxeyui.png" alt="luxeyUI Logo" width="64"/>
+<img src="./public/logo.png" alt="luxeyUI Logo" width="64" style="margin-bottom: 16px"/>
 <br/>
 <img src="https://img.shields.io/npm/l/luxeyui?style=flat" alt="License"/>
 

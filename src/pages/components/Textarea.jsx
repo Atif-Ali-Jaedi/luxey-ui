@@ -7,11 +7,11 @@ const Textarea = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Components", "Textarea"]} />
-			<article className="article">
-				<h1 className="h1">Textarea</h1>
-				<p className="lead">A multi line input for writing text.</p>
-				<h3 className="h3">Slots</h3>
-				<ul className="ul">
+			<article className="prose lg:prose-lg dark:prose-invert [&_li>span]:text-pink-500 [&_li>span]:font-medium dark:[&_li>span]:text-sky-500 [&_span.class]:text-pink-500 [&_span.class]:font-medium dark:[&_span.class]:text-sky-500">
+				<h1 className="my-4">Textarea</h1>
+				<p>A multi line input for writing text.</p>
+				<h3 >Slots</h3>
+				<ul>
 					<li>
 						<span>textarea-outerbox</span>: The outer box of the component.
 					</li>
@@ -29,13 +29,13 @@ const Textarea = () => {
 						<span>textarea</span>: The text area.
 					</li>
 				</ul>
-				<h3 className="h3">Usage</h3>
+				<h3 >Usage</h3>
 				<CodePreview code={{ lang: "html", code: textareaCodes.default }} />
-				<h3 className="h3">Disabled</h3>
+				<h3 >Disabled</h3>
 				<CodePreview code={{ lang: "html", code: textareaCodes.disabled }} />
-				<h3 className="h3">Autosize</h3>
+				<h3 >Autosize</h3>
 				<CodePreview code={{ lang: "html", code: textareaCodes.autoSize }} />
-				<h3 className="h3">Without autosize</h3>
+				<h3 >Without autosize</h3>
 				<p>
 					Set the <span className="class">`data-autosize`</span> of the textarea
 					to <span className="class">`false`</span> of you want without
@@ -44,9 +44,9 @@ const Textarea = () => {
 				<CodePreview
 					code={{ lang: "html", code: textareaCodes.withoutAutosize }}
 				/>
-				<h3 className="h3">Variants</h3>
+				<h3 >Variants</h3>
 				<CodePreview code={{ lang: "html", code: textareaCodes.variants }} />
-				<h3 className="h3">Invalid</h3>
+				<h3 >Invalid</h3>
 				<CodePreview code={{ lang: "html", code: textareaCodes.invalid }} />
 				<ComponentsLinks
 					last={{ link: "../switch", text: "Switch" }}

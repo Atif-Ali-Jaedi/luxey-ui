@@ -7,13 +7,13 @@ const User = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Components", "User"]} />
-			<article className="article">
+			<article className="prose lg:prose-lg dark:prose-invert [&_li>span]:text-pink-500 [&_li>span]:font-medium dark:[&_li>span]:text-sky-500 [&_span.class]:text-pink-500 [&_span.class]:font-medium dark:[&_span.class]:text-sky-500">
 				<h1 className="h1 my-2">User</h1>
-				<p className="lead">
+				<p>
 					Display user information with avatar and name and description.
 				</p>
-				<h3 className="h3">Slots</h3>
-				<ul className="ul">
+				<h3>Slots</h3>
+				<ul>
 					<li>
 						<span>user</span>: The main user container.
 					</li>
@@ -28,7 +28,7 @@ const User = () => {
 					</li>
 				</ul>
 				<CodePreview code={{ lang: "html", code: userCodes.default }} />
-				<h3 className="h3">Customization</h3>
+				<h3>Customization</h3>
 				<p>
 					To customize, you can use tailwind classes. For customizing the style
 					that is already used like <span className="class">`ml-2`</span>, you

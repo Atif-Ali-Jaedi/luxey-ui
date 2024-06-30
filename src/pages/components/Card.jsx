@@ -7,14 +7,14 @@ const Card = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Components", "Card"]} />
-			<article className="article">
-				<h1 className="h1">Card</h1>
-				<p className="lead">
+			<article className="prose lg:prose-lg dark:prose-invert [&_li>span]:text-pink-500 [&_li>span]:font-medium dark:[&_li>span]:text-sky-500">
+				<h1 className="my-4">Card</h1>
+				<p>
 					Card is a wrapper or a container of texts, images or actions inside
 					the context of a subject.
 				</p>
-				<h3 className="h3">Slots</h3>
-				<ul className="ul">
+				<h3>Slots</h3>
+				<ul>
 					<li>
 						<span>card</span>: The main container.
 					</li>
@@ -29,7 +29,7 @@ const Card = () => {
 						<span>card-footer</span>: The actions of the card.
 					</li>
 				</ul>
-				<h3 className="h3">Usage</h3>
+				<h3>Usage</h3>
 				<CodePreview
 					code={{
 						lang: "html",
@@ -37,12 +37,12 @@ const Card = () => {
 						code: cardCodes.default
 					}}
 				/>
-				<h3 className="h3">Customization</h3>
+				<h3>Customization</h3>
 				<p>
 					To customize the card, design at your own will. Its super easy, here's
 					an example.
 				</p>
-				<h3 className="h3">Example</h3>
+				<h3>Example</h3>
 				<CodePreview
 					code={{
 						lang: "html",

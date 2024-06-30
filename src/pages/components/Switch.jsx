@@ -7,18 +7,18 @@ const Switch = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Components", "Switch"]} />
-			<article className="article">
-				<h1 className="h1">Switch</h1>
-				<p className="lead">
+			<article className="prose lg:prose-lg dark:prose-invert ">
+				<h1 className="my-4">Switch</h1>
+				<p>
 					Switch is used to toggle between checked & not checked.
 				</p>
-				<h3 className="h3">Usage</h3>
+				<h3 >Usage</h3>
 				<CodePreview code={{ lang: "html", code: switchCodes.default }} />
-				<h3 className="h3">Disabled</h3>
+				<h3 >Disabled</h3>
 				<CodePreview code={{ lang: "html", code: switchCodes.disabled }} />
-				<h3 className="h3">Sizes</h3>
+				<h3 >Sizes</h3>
 				<CodePreview code={{ lang: "html", code: switchCodes.sizes }} />
-				<h3 className="h3">Colors</h3>
+				<h3 >Colors</h3>
 				<CodePreview code={{ lang: "html", code: switchCodes.colors }} />
 				<ComponentsLinks
 					last={{ link: "../skeleton", text: "Skeleton" }}

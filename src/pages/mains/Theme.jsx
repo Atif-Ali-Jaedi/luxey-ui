@@ -4,14 +4,14 @@ const Theme = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Theme"]} />
-			<article className="border-b border-zinc-400 pb-8">
-				<h1 className="h1 !font-bold mt-2 mb-4 dark:text-white">Theme</h1>
-				<p className="max-w-[60ch] dark:text-zinc-400 text-gray-500">
+			<article className="prose lg:prose-lg dark:prose-invert">
+				<h1 className="my-4">Theme</h1>
+				<p className="max-w-[60ch]">
 					The theme that is used to build this library comes from{" "}
 					<a
 						href="https://nextui.org"
 						rel="nofollow noreferrer"
-						className="link primary"
+						className="link primary no-underline"
 						target="_blank"
 					>
 						NextUI.org
@@ -30,7 +30,7 @@ const Theme = () => {
 					</a>
 					. Their base theme is used.
 				</p>
-				<ul className="my-4 ml-6 list-disc [&>li]:mt-2 [&>li]:capitalize dark:text-zinc-100">
+				<ul>
 					{[
 						"foreground",
 						"primary",
@@ -42,15 +42,16 @@ const Theme = () => {
 						<li key={i}>{c}</li>
 					))}
 				</ul>
-				<p className="dark:text-zinc-100">
+				<p>
 					Use this <code className="code radius-sm">tailwind.config</code> code
 					to use the theme.
 				</p>
 				<br />
-				<Highlight
-					showLineNumbers
-					language="javascript"
-					code={`/** @type {import('tailwindcss').Config} */
+			</article>
+			<Highlight
+				showLineNumbers
+				language="javascript"
+				code={`/** @type {import('tailwindcss').Config} */
 /* Use tailwind.config instead of module.exports
 or export default if you are using tailwindcss cdn */
 module.exports = {
@@ -159,8 +160,7 @@ module.exports = {
 	plugins: []
 };
 `}
-				/>
-			</article>
+			/>
 		</>
 	);
 };

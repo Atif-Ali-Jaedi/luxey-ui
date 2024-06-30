@@ -1,0 +1,21 @@
+import { typographyRef } from "@/data/js/typography"
+import { Fragment } from "react"
+
+<BCrumbs data={["Docs", "Typography"]} />
+
+<Article>
+
+# Typography
+
+Styles for headings, paragraphs, lists...etc, taken from <ELink text="Shadcn/ui" href="https://ui.shadcn.com"/>.
+
+<CodePreview lang="html" code={typographyRef.main} showLineNumbers />
+
+{typographyRef.elements.map((e,i) => (
+  <Fragment>
+    <h2>{e.name}</h2>
+    <CodePreview lang="html" code={e.code}/>
+  </Fragment>
+))}
+
+</Article>

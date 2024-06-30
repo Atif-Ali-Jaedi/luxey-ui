@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { sidebarLinks, components } from "../../data/constants";
-import search from "../../assets/icons/search.svg";
-import xmark from "../../assets/icons/xmark.svg";
+import { sidebarLinks } from "@/data/js/constants";
+import { Search, X } from "lucide-react";
 
 const SearchBox = ({ active, onClose }) => {
 	const [searchQuery, setSearchQuery] = useState("");
@@ -20,7 +19,7 @@ const SearchBox = ({ active, onClose }) => {
 		>
 			<div className="flex items-center gap-2 border-b dark:border-zinc-800 pb-1 px-4">
 				<label htmlFor="search">
-					<img src={search} className="w-5 dark:invert" alt="Search Icon" />
+					<Search className="dark:text-white" size={20} />
 				</label>
 				<input
 					id="search"
@@ -34,19 +33,17 @@ const SearchBox = ({ active, onClose }) => {
 						onClose();
 						setSearchQuery("");
 					}}
+					className="dark:text-white"
 				>
-					<img src={xmark} className="w-5 dark:invert" alt="Close Icon" />
+					<X size={20} />
 				</button>
 			</div>
 			<div className="max-h-[250px] overflow-y-scroll [&_a]:block px-4">
 				<ul>
-					<span className="text-xs text-zinc-400 font-medium">
-						Getting Started
-					</span>
-					{filterLinks(sidebarLinks).map(l => (
+					{filterLinks(sidebarLinks).map((l,i) => (
 						<li
-							key={l.id}
-							className="text-sm relative hover:bg-zinc-100 py-2.5 pr-2 pl-8 rounded mr-1 before:content-[''] before:w-4 before:h-4 before:absolute before:rounded-full before:border-2 before:border-zinc-500 before:left-2 before:top-1/2 before:-translate-y-1/2 dark:before:border-gray-200 dark:text-gray-200 dark:hover:bg-zinc-800"
+							key={i}
+							className="text-sm relative hover:bg-zinc-100 py-2.5 pr-2 pl-8 rounded mr-1 before:content-[''] before:w-4 before:h-4 before:absolute before:rounded-full before:border-2 before:border-zinc-500 before:left-2 before:top-1/2 before:-translate-y-1/2 dark:before:border-gray-200 dark:text-gray-200 dark:hover:bg-zinc-800 transition-all duration-300"
 						>
 							<Link
 								to={l.link}
@@ -65,30 +62,7 @@ const SearchBox = ({ active, onClose }) => {
 						</li>
 					)}
 				</ul>
-				<ul>
-					<span className="text-xs text-zinc-400 font-medium">Components</span>
-					{filterLinks(components).map(l => (
-						<li
-							key={l.id}
-							className="text-sm relative hover:bg-zinc-100 py-2.5 pr-2 pl-8 rounded mr-1 before:content-[''] before:w-4 before:h-4 before:absolute before:rounded-full before:border-2 before:border-zinc-500 before:left-2 before:top-1/2 before:-translate-y-1/2 dark:before:border-gray-200 dark:text-gray-200 dark:hover:bg-zinc-800"
-						>
-							<Link
-								to={l.link}
-								onClick={() => {
-									setSearchQuery("");
-									onClose();
-								}}
-							>
-								{l.name}
-							</Link>
-						</li>
-					))}
-					{filterLinks(components).length === 0 && (
-						<li className="text-sm text-gray-500 text-center">
-							No results found.
-						</li>
-					)}
-				</ul>
+				
 			</div>
 		</div>
 	);

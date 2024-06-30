@@ -1,23 +1,29 @@
-import chevronRight from "../assets/icons/chevron-right.svg";
+import { Chevron } from "@/assets/icons/Chevron";
 import { Link } from "react-router-dom";
-import Button from "../components/ui/Button"
+import { Button } from "@/components/";
+
 export const ComponentsLinks = ({ last, next }) => (
 	<div
-		className={`flex items-center ${
-			next && !last ? "justify-end" : "justify-between"
+		className={`flex items-center py-4 ${
+			!last ? "justify-end" : "justify-between"
 		}`}
 	>
-		{last && (
-			<Button className="py-1.5 text-sm border-2 border-zinc-300 dark:text-white flex rounded-lg items-center gap-1.5 px-3 [&_img]:pointer-events-none [&_img]:scale-[-1] mt-4">
-				<img src={chevronRight} />
-				<Link to={last.link}>{last.text}</Link>
-			</Button>
-		)}
-		{next && (
-			<Button className="py-1.5 text-sm border-2 border-zinc-300 dark:text-white flex rounded-lg items-center gap-1.5 px-3 [&_img]:pointer-events-none mt-4">
-				<Link to={next.link}>{next.text}</Link>
-				<img src={chevronRight} />
-			</Button>
+		{[last, next].map(
+			(item, index) =>
+				item && (
+					<Link key={index} to={item.link} className="no-underline">
+						<Button
+							variant="light"
+							radius="lg"
+							size="sm"
+							className="max-h-11 gap-2"
+						>
+							{index === 0 ? <Chevron position="left" isGradient /> : null}
+							{item.text}
+							{index === 1 ? <Chevron isGradient /> : null}
+						</Button>
+					</Link>
+				)
 		)}
 	</div>
 );

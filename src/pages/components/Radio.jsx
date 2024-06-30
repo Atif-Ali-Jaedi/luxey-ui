@@ -7,14 +7,14 @@ const Radio = () => {
 	return (
 		<>
 			<Breadcrumbs data={["Docs", "Components", "Radio"]} />
-			<article className="article">
-				<h1 className="h1">Radio</h1>
-				<p className="lead">
+			<article className="prose lg:prose-lg dark:prose-invert [&_li>span]:text-pink-500 [&_li>span]:font-medium dark:[&_li>span]:text-sky-500 [&_span.class]:text-pink-500 [&_span.class]:font-medium dark:[&_span.class]:text-sky-500">
+				<h1 className="my-4">Radio</h1>
+				<p>
 					Radio buttons—where only one of the buttons can be checked or
 					selected.
 				</p>
-				<h3 className="h3">Slots</h3>
-				<ul className="ul">
+				<h3 >Slots</h3>
+				<ul >
 					<li>
 						<span>radio-group</span>: The container of the radios.
 					</li>
@@ -43,19 +43,19 @@ const Radio = () => {
 					<span className="class">`.radio-group`</span>
 				</blockquote>
 				<br />
-				<h3 className="h3">Usage</h3>
+				<h3 >Usage</h3>
 				<CodePreview code={{ lang: "html", code: radioCodes.default }} />
-				<h3 className="h3">Disabled</h3>
+				<h3 >Disabled</h3>
 				<CodePreview code={{ lang: "html", code: radioCodes.disabled }} />
-				<h3 className="h3">With description</h3>
+				<h3 >With description</h3>
 				<CodePreview
 					code={{ lang: "html", code: radioCodes.withDescription }}
 				/>
-				<h3 className="h3">Horizontal</h3>
+				<h3 >Horizontal</h3>
 				<CodePreview code={{ lang: "html", code: radioCodes.horizontal }} />
-				<h3 className="h3">Invalid</h3>
+				<h3 >Invalid</h3>
 				<CodePreview code={{ lang: "html", code: radioCodes.invalid }} />
-				<h3 className="h3">Colors</h3>
+				<h3 >Colors</h3>
 				<CodePreview code={{ lang: "html", code: radioCodes.colors }} />
 				<ComponentsLinks
 					last={{ link: "../link", text: "Link" }}
