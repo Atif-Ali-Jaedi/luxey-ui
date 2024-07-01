@@ -9,6 +9,7 @@ const Checkbox = lazy(() => import("./components/Checkbox.jsx"));
 const Chip = lazy(() => import("./components/Chip.jsx"));
 const Code = lazy(() => import("./components/Code.jsx"));
 const Divider = lazy(() => import("./components/Divider.jsx"));
+const Input = lazy(() => import("./components/Input.mdx"));
 const Link = lazy(() => import("./components/Link.jsx"));
 const Radio = lazy(() => import("./components/Radio.jsx"));
 const Skeleton = lazy(() => import("./components/Skeleton.jsx"));
@@ -33,21 +34,22 @@ const docs = [
 ];
 
 const components = [
-	{ id: 1, path: "avatar", element: Avatar },
-	{ id: 2, path: "user", element: User },
-	{ id: 3, path: "skeleton", element: Skeleton },
-	{ id: 4, path: "card", element: Card },
-	{ id: 5, path: "accordion", element: Accordion },
-	{ id: 6, path: "badge", element: Badge },
-	{ id: 7, path: "button", element: Button },
-	{ id: 8, path: "checkbox", element: Checkbox },
-	{ id: 9, path: "chip", element: Chip },
-	{ id: 10, path: "code", element: Code },
-	{ id: 11, path: "divider", element: Divider },
-	{ id: 12, path: "link", element: Link },
-	{ id: 13, path: "radio", element: Radio },
-	{ id: 14, path: "switch", element: Switch },
-	{ id: 15, path: "textarea", element: Textarea }
+	{  path: "avatar", element: Avatar },
+	{ path: "user", element: User },
+	{  path: "skeleton", element: Skeleton },
+	{ path: "card", element: Card },
+	{ path: "accordion", element: Accordion },
+	{  path: "badge", element: Badge },
+	{ path: "button", element: Button },
+	{  path: "checkbox", element: Checkbox },
+	{  path: "chip", element: Chip },
+	{  path: "code", element: Code },
+	{path: "divider", element: Divider },
+	{  path: "link", element: Link },
+	{ path: "radio", element: Radio },
+	{ path: "switch", element: Switch },
+	{ path: "textarea", element: Textarea },
+	{ path: "input", element: Input },
 ];
 
 export { components, docs };

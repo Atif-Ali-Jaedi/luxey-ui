@@ -91,8 +91,8 @@ const App = () => {
 										/>
 									))}
 									<Route path="components">
-										{components.map(c => (
-											<Route key={c.id} path={c.path} element={<c.element />} />
+										{components.map((c, i) => (
+											<Route key={i} path={c.path} element={<c.element components={mdxComponents} />} />
 										))}
 									</Route>
 								</Route>

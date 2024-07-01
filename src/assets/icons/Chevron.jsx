@@ -1,4 +1,4 @@
-export const Chevron = () => (
+export const Chevron = ({position}) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="20"
@@ -9,6 +9,7 @@ export const Chevron = () => (
 		strokeWidth="2"
 		strokeLinecap="round"
 		strokeLinejoin="round"
+		className={position === "left"?  "-rotate-180" : position === "top"?  "-rotate-90" : position === "bottom"?  "rotate-90" : ""}
 	>
 		<defs>
 			<linearGradient id="grad1" gradientTransform="rotate(90)">

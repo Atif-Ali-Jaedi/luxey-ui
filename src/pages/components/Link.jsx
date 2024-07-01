@@ -35,7 +35,7 @@ const Link = () => {
 					code={{ lang: "html", showLineNumbers: true, code: linkCodes.block }}
 				/>
 				<ComponentsLinks
-					last={{ link: "../divider", text: "Divider" }}
+					last={{ link: "../input", text: "Input" }}
 					next={{ link: "../radio", text: "Radio" }}
 				/>
 			</article>

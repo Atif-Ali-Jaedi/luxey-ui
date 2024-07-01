@@ -15,7 +15,7 @@ const Divider = () => {
 				<CodePreview code={{ lang: "html", code: dividerCodes.default }} />
 				<ComponentsLinks
 					last={{ link: "../code", text: "Code" }}
-					next={{ link: "../link", text: "Link" }}
+					next={{ link: "../input", text: "Input" }}
 				/>
 			</article>
 		</>
