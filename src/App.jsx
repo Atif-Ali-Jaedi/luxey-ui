@@ -45,7 +45,8 @@ const App = () => {
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [location]);
+	}, [location]) 
+	
 	return (
 		<HelmetProvider>
 			<ThemeProvider>
@@ -92,7 +93,11 @@ const App = () => {
 									))}
 									<Route path="components">
 										{components.map((c, i) => (
-											<Route key={i} path={c.path} element={<c.element components={mdxComponents} />} />
+											<Route
+												key={i}
+												path={c.path}
+												element={<c.element components={mdxComponents} />}
+											/>
 										))}
 									</Route>
 								</Route>

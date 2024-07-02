@@ -1,0 +1,118 @@
+import Highlight from "@/utils/Highlight";
+import { CSSVariables } from "@/data/js/CSSVariables";
+import { tailwindConfiguration } from "@/data/js/tailwindConfiguration";
+
+<BCrumbs data={["Docs", "Theme"]} />
+
+<Article>
+
+# Theme
+
+Use CSS Variables or TailwindCSS to use the theme.
+
+<SM>
+  You can choose between using CSS variables or Tailwind CSS utility classes for
+  theming.
+</SM>
+
+## What's a Theme?
+
+A theme is web design manages the front-end design, establishing the overall appearance and functionality by managing its front-end design. Themes determine all design components: page layouts, backgrounds, color palettes, headers and footers, positioning, sizing, and typography.
+
+## Usage
+
+After installing the library, you can either use the theme by CSS Variables or TailwindCSS utility classes.
+
+### CSS Variables
+
+I've made it super easy to customize. All you need is 2 `selectors`, `html {}` and `html.dark {}`. The second one is for customizing the theme if you're using dark mode.
+
+```css
+.html {
+  --base-primary: 222.2 47.4% 11.2%;
+}
+```
+
+The background color of the following component will be `hsl(var(--base-primary))`.
+
+> **Note**: As if you're not using the theme in your `tailwind.config.js`, you must use the theme as following only when you're not using the theme in the components:
+
+```html
+<div class="bg-[hsl(var(--base-primary)]">Hello</div>
+```
+
+But, if it is a LuxeyUI Component, it looks something like this:
+
+```html
+<div class="bg-base-primary">Hello</div>
+```
+
+The good thing is that, you don't need to write `bg-base-primary` here, because in a primary button, it was already done.
+
+> **CSS variables must be defined without color space function.** See the <ELink text="Tailwind CSS documentation" link="https://tailwindcss.com/docs/customizing-colors#using-css-variables"/> for more information.
+
+### List of Variables
+
+Here is the full list of the variables, use it as your need and especially customization.
+
+<Highlight language="css" code={CSSVariables} />
+
+> **Note**: See the [Colors](/docs/colors) section to learn more about the colors.
+
+### Adding new Colors
+
+To add new colors, you need to add them to your CSS file and to your `tailwind.config.js` file.
+
+```css
+:root {
+  --custom: 38 92% 50%;
+  --custom-foreground: 48 96% 89%;
+}
+:root.dark {
+  --custom: 48 96% 89%;
+  --custom-foreground: 38 92% 50%;
+}
+```
+
+<hr className="border-0" />
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        warning: "hsl(var(--warning))",
+        "warning-foreground": "hsl(var(--warning-foreground))",
+      },
+    },
+  },
+};
+```
+
+You can now use the `custom` utility class in your components.
+
+```html
+<div className="bg-warning text-warning-foreground" />
+```
+
+### tailwind.config.js
+
+To use the default theme more efficiently without writing those CSS Variables in your CSS file, copy & paste the following code in your `tailwind.config.js` file.
+
+<Highlight language="js" code={tailwindConfiguration} />
+
+Now you can freely use the utility classes in your `html` like this:
+
+```html
+<div class="bg-base-primary rounded-14 hover:scale-97 focus:outline-layout-focus">Hello</div>
+```
+
+### Other color formats
+
+I recommend using <ELink text="HSL colors" link="https://www.smashingmagazine.com/2021/07/hsl-colors-css/"/> for theming but you can also use other color formats if you prefer but it'll be a headache to customize.
+
+See the <ELink text="Tailwind CSS documentation" link="https://tailwindcss.com/docs/customizing-colors#using-css-variables"/> for more information on using rgb, rgba or hsl colors.
+
+<wbr />
+
+</Article>

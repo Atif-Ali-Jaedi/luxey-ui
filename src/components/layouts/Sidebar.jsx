@@ -37,8 +37,8 @@ export const Sidebar = ({ isActive, onClose, onSpecificLocations }) => {
 								<ul className="mb-4 dark:text-zinc-400 text-gray-600 mt-3 flex flex-col gap-2.5 [&_a.active]:font-medium [&_a.active]:text-gray-700 dark:[&_a.active]:text-gray-200">
 									{sidebarLinks
 										.slice(
-											index === 0 ? 0 : index === 1 ? 3 : index === 2 ? 6 : 9,
-											index === 0 ? 3 : index === 1 ? 6 : index === 2 ? 9 : 25
+											index === 0 ? 0 : index === 1 ? 3 : index === 2 ? 6 : 10,
+											index === 0 ? 3 : index === 1 ? 6 : index === 2 ? 10 : 26
 										)
 										.map((link, i) => (
 											<li

@@ -19,9 +19,10 @@ const User = lazy(() => import("./components/User.jsx"));
 
 const Introduction = lazy(() => import("./mains/docs/Introduction.mdx"));
 const Installation = lazy(() => import("./mains/docs/Installation.mdx"));
-const Theme = lazy(() => import("./mains/Theme.jsx"));
+const Theme = lazy(() => import("./mains/docs/Theme.mdx"));
 const Changelog = lazy(() => import("./mains/docs/Changelog.mdx"));
 const Typography = lazy(() => import("./mains/docs/Typography.mdx"));
+const DarkMode = lazy(() => import("./mains/docs/DarkMode.mdx"));
 const Examples = lazy(() => import("./mains/Examples.jsx"));
 
 const docs = [
@@ -30,26 +31,27 @@ const docs = [
 	{ id: 103, path: "theme", element: Theme },
 	{ id: 104, path: "changelog", element: Changelog },
 	{ id: 105, path: "typography", element: Typography },
-	{ id: 106, path: "examples", element: Examples }
+	{ id: 106, path: "examples", element: Examples },
+	{ id: 107, path: "dark-mode", element: DarkMode }
 ];
 
 const components = [
-	{  path: "avatar", element: Avatar },
+	{ path: "avatar", element: Avatar },
 	{ path: "user", element: User },
-	{  path: "skeleton", element: Skeleton },
+	{ path: "skeleton", element: Skeleton },
 	{ path: "card", element: Card },
 	{ path: "accordion", element: Accordion },
-	{  path: "badge", element: Badge },
+	{ path: "badge", element: Badge },
 	{ path: "button", element: Button },
-	{  path: "checkbox", element: Checkbox },
-	{  path: "chip", element: Chip },
-	{  path: "code", element: Code },
-	{path: "divider", element: Divider },
-	{  path: "link", element: Link },
+	{ path: "checkbox", element: Checkbox },
+	{ path: "chip", element: Chip },
+	{ path: "code", element: Code },
+	{ path: "divider", element: Divider },
+	{ path: "link", element: Link },
 	{ path: "radio", element: Radio },
 	{ path: "switch", element: Switch },
 	{ path: "textarea", element: Textarea },
-	{ path: "input", element: Input },
+	{ path: "input", element: Input }
 ];
 
 export { components, docs };

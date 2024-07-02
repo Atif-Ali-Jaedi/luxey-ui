@@ -52,7 +52,7 @@ code[class*="language-"] ::selection {
 }
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-[--foreground] bg-[0] font-mono text-start whitespace-pre rounded-xl leading-[1.5em]	[word-spacing:normal] [word-break:normal] [word-wrap:normal]	[tab-size:2] [hyphens:none];
+	@apply text-[--foreground] bg-[0] font-mono text-start whitespace-pre !rounded-xl leading-[1.5em] [word-spacing:normal] [word-break:normal] [word-wrap:normal]	[tab-size:2] [hyphens:none] outline-none;
 	& * {
 		@apply text-sm font-mono;
 	}

@@ -19,7 +19,7 @@ export const GoToTopBtn = () => {
 					: "opacity-0 pointer-events-none"
 			}`}
 		>
-			<ChevronUp />
+			<ChevronUp className="mix-blend-difference" />
 		</Button>
 	);
 };

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 import { ComponentsLinks } from "@/utils/ComponentsLinks";
 import { Breadcrumbs } from "@/utils/Breadcrumbs";
-import  CodePreview  from "@/utils/CodePreview";
+import CodePreview from "@/utils/CodePreview";
 import Highlight from "@/utils/Highlight";
 
 export const mdxComponents = {
@@ -10,7 +10,9 @@ export const mdxComponents = {
 		return <h1 className="!my-4" {...props} />;
 	},
 	a(props) {
-		return <Link className="link no-underline primary" to={props.href} {...props} />;
+		return (
+			<Link className="link no-underline primary" to={props.href} {...props} />
+		);
 	},
 	CodePreview({ lang, code, showLineNumbers }, props) {
 		return (
@@ -21,7 +23,7 @@ export const mdxComponents = {
 		);
 	},
 	SM(props) {
-		return <small className="text-sm" {...props} />;
+		return <small className="text-sm font-medium" {...props} />;
 	},
 	ELink({ hideExternalIcon, text, href }, props) {
 		return (
@@ -47,6 +49,14 @@ export const mdxComponents = {
 		return (
 			<span
 				className="text-pink-500 font-medium dark:text-sky-500"
+				{...props}
+			/>
+		);
+	},
+	blockquote(props) {
+		return (
+			<blockquote
+				className="not-italic border bg-zinc-50 !p-4 [&>p]:!m-0 rounded-xl [&>p::before]:content-[''] font-normal [&_strong]:font-medium"
 				{...props}
 			/>
 		);

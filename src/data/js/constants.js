@@ -65,6 +65,7 @@ const sidebarLinks = [
 	{ name: "Typography", link: "/docs/typography" },
 
 	{ name: "Theme", link: "/docs/theme" },
+	{ name: "Dark Mode", link: "/docs/dark-mode" },
 	{ name: "Examples", link: "/docs/examples" },
 	{ name: "Changelog", link: "/docs/changelog" },
 
