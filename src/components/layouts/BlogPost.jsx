@@ -14,7 +14,10 @@ export const BlogPost = () => {
 	return (
 		<article className="prose lg:prose-lg dark:prose-invert mx-auto mb-20">
 			<Helmet>
-				<title>LuxeyUI - {blog.name}</title>
+				<title>
+					{blog.name} | LuxeyUI - Elevate your design effortlessly and quickly
+				</title>
+<meta name="description" content={blog.description}/>
 			</Helmet>
 			<Link
 				to="/blog"

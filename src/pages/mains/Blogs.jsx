@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Blog } from "@/components";
 import blogs from "@/data/blogs/blogs";
 const blogCategories = ["All Posts", "Changelog", "Announcement"];
-import {Helmet} from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
 	const [selectedCategory, setSelectedCategory] = useState("All Posts");
@@ -13,10 +13,12 @@ const Blogs = () => {
 			: blogs.filter(blog => blog.tag === selectedCategory);
 	return (
 		<div className="flex flex-col items-center mb-20">
-<Helmet>
-<title>Blog | LuxeyUI - Elevate your design effortlessly and quickly by our beautiful &
-			modern UI library</title>
-</Helmet>
+			<Helmet>
+				<title>
+					Blog | LuxeyUI - Elevate your design effortlessly and quickly
+				</title>
+<meta name="description" content={blogs[0].description}/>
+			</Helmet>
 			<section className="prose md:prose-lg dark:prose-invert md:px-3">
 				<header className="flex items-center justify-center flex-col text-center">
 					<h2 className="!mt-0 !mb-4">

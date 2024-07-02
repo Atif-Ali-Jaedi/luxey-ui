@@ -1,7 +1,7 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import Highlight from "./Highlight";
 import { useTheme } from "../ThemeContext";
-import {currentVersion} from "@/data/js/constants"
+import { currentVersion } from "@/data/js/constants";
 
 const CodePreview = ({ code, iframeHeight }) => {
 	const [previewToggle, setPreviewToggle] = useState(true);

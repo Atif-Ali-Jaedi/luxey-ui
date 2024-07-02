@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
-	`relative overflow-hidden transition-all duration-300 active:scale-97 inline-flex items-center justify-center gap-3`,
+	`relative overflow-hidden transition-all duration-300 active:scale-97 inline-flex outline-none items-center justify-center gap-3`,
 	{
 		variants: {
 			size: {

@@ -4,6 +4,7 @@ import { ComponentsLinks } from "@/utils/ComponentsLinks";
 import { Breadcrumbs } from "@/utils/Breadcrumbs";
 import CodePreview from "@/utils/CodePreview";
 import Highlight from "@/utils/Highlight";
+import { twMerge } from "tailwind-merge";
 
 export const mdxComponents = {
 	h1(props) {
@@ -20,6 +21,20 @@ export const mdxComponents = {
 				code={{ lang: lang, code: code, showLineNumbers: showLineNumbers }}
 				{...props}
 			/>
+		);
+	},
+	Chip({ notTranslate, color, variant, size, radius, className, children }) {
+		return (
+			<div
+				className={twMerge(
+					`chip ${color || "primary"} ${variant || "solid"} ${
+						size || "size-md"
+					} ${radius || "radius-full"} ${notTranslate || "translate-y-8"}`,
+					className
+				)}
+			>
+				{children}
+			</div>
 		);
 	},
 	SM(props) {
@@ -76,6 +91,14 @@ export const mdxComponents = {
 		) : (
 			<code
 				className="code before:content-[''] after:content-['']"
+				{...props}
+			/>
+		);
+	},
+	Time(props) {
+		return (
+			<time
+				className="block mt-4 text-lg text-gray-600 dark:text-gray-400 translate-y-8"
 				{...props}
 			/>
 		);

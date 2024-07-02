@@ -38,7 +38,7 @@ npm i luxeyui@latest
 
 - **Dark Mode**: After a long time I finally added dark mode. 
 - **Theming**: The ability to customize the original theme colors within your css by using css variables. 
-- **Better** Customization: Now, it's a lot easier to customize the components. 
+- **Better Customization**: Now, it's a lot easier to customize the components. 
 - **Input**: Added the most requested component "input".
 - **Components**: Fixed the badge and the button component. Also remade entirely the card and the textarea component and Adjusted all the components for darkmode. 
 
