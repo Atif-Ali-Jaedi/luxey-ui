@@ -17,7 +17,7 @@ const Blogs = () => {
 				<title>
 					Blog | LuxeyUI - Elevate your design effortlessly and quickly
 				</title>
-<meta name="description" content={blogs[0].description}/>
+				<meta name="description" content={blogs[0].description} />
 			</Helmet>
 			<section className="prose md:prose-lg dark:prose-invert md:px-3">
 				<header className="flex items-center justify-center flex-col text-center">

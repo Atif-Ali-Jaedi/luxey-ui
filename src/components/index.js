@@ -1,6 +1,6 @@
 import { Hero } from "./layouts/home/Hero";
 import { Features } from "./layouts/home/Features";
-import { Details } from "./layouts/home/Details";
+import { Details } from "./layouts/home/details/Details";
 import { Blogs } from "./layouts/home/Blogs";
 
 import { BlogPost } from "./layouts/BlogPost";
@@ -12,7 +12,8 @@ import { Footer } from "./layouts/home/footer/Footer";
 
 import { Button } from "./ui/Button";
 import { Blog } from "./ui/Blog";
-import { Timeline } from "./ui/Timeline";
+import { SearchModal } from "./ui/SearchModal";
+import { Steps, Step, HighlightedCode} from "./ui/Steps";
 
 export {
 	Hero,
@@ -25,6 +26,9 @@ export {
 	Blog,
 	Navbar,
 	Sidebar,
-	Timeline,
-	CTA
+	CTA,
+	Steps,
+	Step,
+	HighlightedCode,
+	SearchModal
 };

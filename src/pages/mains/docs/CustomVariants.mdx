@@ -1,0 +1,87 @@
+import { Helmet } from "react-helmet-async";
+
+<Helmet>
+  <title>Custom Variants | LuxeyUI - Elevate your design effortlessly and quickly</title> 
+  <meta name="description" content="LuxeyUI allows you to create new variants for components that better suit your project's needs. This can be done quite easily. All you have to do is to add new `selectors` and `properties` in your CSS file for that specific component."/>
+</Helmet>
+
+
+<BCrumbs data={["Docs", "Custom Variants"]}/>
+
+<Article>
+
+# Custom Variants 
+
+LuxeyUI allows you to create new variants for components that better suit your project's needs. This can be done quite easily. 
+
+All you have to do is to add new `selectors` and `properties` in your CSS file for that specific component.
+
+> **Note**: For better understanding the customization process  please visit the [Override Styles](/docs/override-styles) documentation.
+
+## Creating variants for Components 
+
+Let's customize the `Button` component and add a new variant to it. 
+
+### Using Vanilla CSS 
+
+Using Vanilla CSS, it is super simple. Take this for example:
+
+<CodePreview code={`<style>
+  button.button {
+    /* Colors */
+    &.violet {
+      background: #8b5cf6;
+      color: #fff;
+    }
+    /* Sizes */
+    &.size-xl {
+      padding: 0.75em 2em;
+    }
+  }
+</style>
+<button class="button violet">Button</button>
+<button class="button foreground radius-full size-xl">Button</button>
+`}/>
+
+This is just a basic example, you can do a lot more if you know good CSS.
+
+### Using TailwindCSS with PostCSS
+
+Using TailwindCSS, it is the exact same process. But sometimes you might need to use duplicate `selectors` in order to work properly. Below is an example about how to implement that: 
+
+```css
+button.button {
+  /* Colors */ 
+  &.olive {
+    @apply text-[#000] bg-[#84cc16];
+  }
+  &.orange { 
+    @apply bg-[#ff8c00] text-[#fff];
+  }
+  &.violet {
+    @apply bg-[#8b5cf6] text-[#fff];
+  }
+  /* Disabled */
+  &[data-disabled] {
+    @apply bg-[#eaeaea] text-[#000] opacity-50 cursor-not-allowed;
+  }
+  /* Sizes */
+  &.size-xs {
+    @apply px-2 min-w-12 h-6 text-tiny gap-1 rounded-small;
+  }
+  &.size-md {
+    @apply px-4 min-w-20 h-10 text-small gap-2 rounded-lg;
+  }
+  &.size-xl {
+    @apply px-8 min-w-28 h-14 text-large gap-4 rounded-xl;
+  }
+}
+```
+
+Like these, you can add your custom variants within your css file using either Vanilla CSS or TailwindCSS.
+
+> **Note**: You can see the source code of every components in the <ELink text="github repository" link="https://github.com/Atif-Ali-Jaedi/luxeyui" /> or you can see the class names of the components to customize as needed.
+
+<wbr />
+
+</Article>

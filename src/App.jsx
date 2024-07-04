@@ -8,12 +8,11 @@ import {
 import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense, useEffect, useState } from "react";
 import Home from "./pages/mains/Home";
-import Blogs from "./pages/mains/Blogs";
 
 import { Footer, Navbar, Sidebar, BlogPost, CTA } from "@/components";
 
 import { GoToTopBtn } from "./utils/GoToTopBtn";
-import { components, docs } from "./pages/pages";
+import { components, docs, Blogs } from "./pages/pages";
 import ThemeProvider from "./ThemeContext";
 import { mdxComponents } from "@/data/jsx/MDXComponents";
 
@@ -45,8 +44,8 @@ const App = () => {
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [location]) 
-	
+	}, [location]);
+
 	return (
 		<HelmetProvider>
 			<ThemeProvider>

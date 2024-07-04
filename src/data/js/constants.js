@@ -10,33 +10,17 @@ import {
 } from "lucide-react";
 import { Icodethis } from "@/assets";
 
-
 const currentVersion = "0.3.1";
 
 const navLinks = [
 	{ id: 1, name: "Documentation", link: "/docs" },
 	{ id: 2, name: "Components", link: "/docs/components/avatar" },
-	{ id: 3, name: "Examples", link: "/docs/examples" },
-	{ id: 4, name: "Theme", link: "/docs/theme" }
+	{ id: 3, name: "Blog", link: "/blog" },
+	{ id: 4, name: "Theme", link: "/docs/theme" },
+	{ id: 5, name: "Changelog", link: "/docs/changelog" }
 ];
 
 const components = [
-	{ name: "Avatar", link: "/docs/components/avatar" },
-	{ name: "Accordion", link: "/docs/components/accordion" },
-	{ name: "Badge", link: "/docs/components/badge" },
-	{ name: "Button", link: "/docs/components/button", chip: "Updated" },
-	{ name: "Card", link: "/docs/components/card", chip: "Updated" },
-	{ name: "Checkbox", link: "/docs/components/checkbox" },
-	{ name: "Chip", link: "/docs/components/chip" },
-	{ name: "Code", link: "/docs/components/code" },
-	{ name: "Divider", link: "/docs/components/divider" },
-	{ name: "Input", link: "/docs/components/input", chip: "New" },
-	{ name: "Link", link: "/docs/components/link" },
-	{ name: "Radio", link: "/docs/components/radio" },
-	{ name: "Skeleton", link: "/docs/components/skeleton", chip: "Updated" },
-	{ name: "Switch", link: "/docs/components/switch" },
-	{ name: "Textarea", link: "/docs/components/textarea", chip: "Updated" },
-	{ name: "User", link: "/docs/components/user" },
 	{ name: "Avatar", link: "/docs/components/avatar" },
 	{ name: "Accordion", link: "/docs/components/accordion" },
 	{ name: "Badge", link: "/docs/components/badge" },
@@ -56,19 +40,19 @@ const components = [
 ];
 
 const sidebarLinks = [
-	{ name: "Documentation", link: "/docs" },
-	{ name: "Components", link: "/docs/components/avatar" },
-	{ name: "Blog", link: "/blog" },
+	{ type: "normal", name: "Documentation", link: "/docs" },
+	{ type: "normal", name: "Components", link: "/docs/components/avatar" },
+	{ type: "normal", name: "Blog", link: "/blog" },
 
-	{ name: "Introduction", link: "/docs" },
-	{ name: "Installation", link: "/docs/installation" },
-	{ name: "Typography", link: "/docs/typography" },
+	{ type: "normal", name: "Introduction", link: "/docs" },
+	{ type: "normal", name: "Installation", link: "/docs/installation" },
+	{ type: "normal", name: "Typography", link: "/docs/typography" },
 
-	{ name: "Theme", link: "/docs/theme" },
-	{ name: "Dark Mode", link: "/docs/dark-mode" },
-	{ name: "Override Styles", link: "/docs/override-styles" },
-	{ name: "Examples", link: "/docs/examples" },
-	{ name: "Changelog", link: "/docs/changelog" },
+	{ type: "normal", name: "Theme", link: "/docs/theme" },
+	{ type: "normal", name: "Dark Mode", link: "/docs/dark-mode" },
+	{ type: "normal", name: "Override Styles", link: "/docs/override-styles" },
+	{ type: "normal", name: "Custom Variants", link: "/docs/custom-variants" },
+	{ type: "normal", name: "Changelog", link: "/docs/changelog" },
 
 	...components
 ];

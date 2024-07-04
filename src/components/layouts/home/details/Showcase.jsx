@@ -1,9 +1,9 @@
 import { Button } from "@/components";
 import { useState } from "react";
 import Highlight from "@/utils/Highlight";
-import { Workflow } from "@/components/layouts/home/details/Workflow";
-import { UI } from "@/components/layouts/home/details/UI";
-import { CardWithCode } from "@/components/layouts/home/details/CardWithCode";
+import { Workflow } from "./Workflow";
+import { UI } from "./UI";
+import { CardWithCode } from "./CardWithCode";
 
 export const Showcase = ({ id }) => {
 	const [size, setSize] = useState("md");

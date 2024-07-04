@@ -24,7 +24,9 @@ const Changelog = lazy(() => import("./mains/docs/Changelog.mdx"));
 const Typography = lazy(() => import("./mains/docs/Typography.mdx"));
 const DarkMode = lazy(() => import("./mains/docs/DarkMode.mdx"));
 const OverrideStyles = lazy(() => import("./mains/docs/OverrideStyles.mdx"));
-const Examples = lazy(() => import("./mains/Examples.jsx"));
+const CustomVariants = lazy(() => import("./mains/docs/CustomVariants.mdx"));
+
+const Blogs = lazy(() => import("./mains/Blogs.jsx"));
 
 const docs = [
 	{ id: 101, index: true, element: Introduction },
@@ -32,9 +34,9 @@ const docs = [
 	{ id: 103, path: "theme", element: Theme },
 	{ id: 104, path: "changelog", element: Changelog },
 	{ id: 105, path: "typography", element: Typography },
-	{ id: 106, path: "examples", element: Examples },
-	{ id: 107, path: "dark-mode", element: DarkMode },
-	{ id: 108, path: "override-styles", element: OverrideStyles }
+	{ id: 106, path: "dark-mode", element: DarkMode },
+	{ id: 107, path: "override-styles", element: OverrideStyles },
+	{ id: 108, path: "custom-variants", element: CustomVariants }
 ];
 
 const components = [
@@ -56,4 +58,4 @@ const components = [
 	{ path: "input", element: Input }
 ];
 
-export { components, docs };
+export { components, docs, Blogs };

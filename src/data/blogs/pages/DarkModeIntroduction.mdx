@@ -1,4 +1,4 @@
-import { Timeline } from "@/components";
+import { Steps, Step } from "@/components";
 import { currentVersion } from "@/data/js/constants";
 
 After months of anticipation and user requests, I'm thrilled to announce the arrival of Dark Mode in our UI Library! This long-awaited feature is designed to enhance your development experience and make your applications more user-friendly, especially in low-light environments.
@@ -44,63 +44,59 @@ You might be wondering why it took me so long to roll out this feature. Here’s
 
 Enabling Dark Mode in your projects is straightforward:
 
-<Timeline
-  data={[
-    {
-      id: 1,
-      heading: "Update the library",
-      text: "Ensure you are using the latest version of our UI Library.",
-      code: {
-        lang: "html",
-        code: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>`,
-      },
-    },
-    {
-      id: 2,
-      heading: "Enable Dark Mode",
-      html: `To enable dark mode, please add thhis code <code class="code before:content-[''] after:content-['']">darkMode: 'class'</code> in your <code class="code before:content-[''] after:content-['']">tailwind.config.js</code> file.`,
-      code: {
-        lang: "js",
-        code: `export default { darkMode: "class" }
-tailwind.config = { darkMode: "class" } // For CDN
-`,
-      },
-    },
-    {
-      id: 3,
-      heading: "Customize as Needed",
-      html: `Modify your css file to tweak the Dark Mode to suit your design needs. An example given below. Make sure to use <code class="code">hsla</code> format and without the parenthesis and <code class="code">hsla</code> to customize the colors.`,
-      code: {
-        lang: "css",
-        code: `html.dark {
-	--base-primary: 188.6 100% 46.7%;
-	--content-4: 0 0% 99.6%;
-}`,
-      },
-    },
-    {
-      id: 4,
-      heading: "Add the toggle functionality",
-      text: "Now all you have to do is to make a functionality for toggling dark mode. For example:",
-      code: {
-        lang: "html",
-        code: `<input type="checkbox" id="toggler" class="switch" />
-<script>
-  document
-		.querySelector("#toggler")
-		.addEventListener(
-			"click",
-			e =>
-				(document.documentElement.className = e.target.checked
-					? "dark"
-					: "")
-		);
-</script>`,
-      },
-    },
-  ]}
-/>
+<Steps>
+  <Step heading="Update the library">
+    Ensure you are using the latest version of our UI Library.
+    
+    Use this if you're using CDN.
+    ```html
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>
+    ```
+    And, use this if you're installing via npm.
+    ```bash 
+    npm i luxeyui@latest
+    ```
+  </Step>
+  <Step heading="Enable Dark Mode">
+    To enable dark mode, please copy & paste one of these snippet in your `tailwind.config.js` file.
+    ```js 
+    tailwind.config = { darkMode: "class" } // For CDN
+    ```
+    ```js
+    module.exports = {
+      darkMode: "class",
+      // ...
+    }
+    ```
+  </Step>
+  <Step heading="Customize as Needed">
+    Modify your css file to tweak the Dark Mode to suit your design needs. An example given below. Make sure to use `hsla` format and without the parenthesis and `hsla` to customize the colors.
+    ```css 
+      :root.dark {
+      	--base-primary: 188.6 100% 46.7%;
+      	--content-4: 0 0% 99.6%;
+      }
+    ```
+  </Step>
+  <Step heading="Add the toggle functionality">
+    Now all you have to do is to make a functionality for toggling dark mode. For example:
+    ```html
+    <input type="checkbox" id="toggler" class="switch" />
+    <script>
+      document
+    		.querySelector("#toggler")
+    		.addEventListener(
+    			"click",
+    			e =>
+    				(document.documentElement.className = e.target.checked
+    					? "dark"
+    					: "")
+    		);
+    </script>
+    ```
+  </Step>
+</Steps>
 
 ### What's Next?
 

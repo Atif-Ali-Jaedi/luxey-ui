@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { details } from "@/data/js/constants";
 import { Button } from "@/components";
 import { ArrowRight } from "lucide-react";
-import { Showcase } from "@/data/Showcase";
+import { Showcase } from "./Showcase";
 export const Details = () => (
 	<section className="prose md:prose-lg dark:prose-invert max-w-none md:px-3">
 		<div className="grid sm:grid-cols-2 gap-x-20 gap-y-16 items-center">

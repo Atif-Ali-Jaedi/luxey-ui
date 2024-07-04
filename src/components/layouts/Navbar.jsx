@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import SearchBox from "../ui/SearchBox";
-import { Button } from "../ui/Button";
+import { Button, SearchModal } from "@/components";
 import { navLinks, currentVersion } from "@/data/js/constants";
 import { useTheme, useToggleTheme } from "@/ThemeContext";
 import { Search, Sun, Moon, Github } from "lucide-react";
@@ -42,7 +41,7 @@ export const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 							></div>
 						))}
 					</div>
-					<Link to="/" className="flex items-end dark:text-gray-50">
+					<Link to="/" className="flex items-end dark:text-gray-50 link">
 						<img src="/logo.png" width="24" />
 						<h3 className="text-2xl font-semibold">uxeyUI</h3>
 					</Link>
@@ -99,14 +98,14 @@ export const Navbar = ({ togglerOnClick, sidebarToggle }) => {
 				</div>
 			</nav>
 			<div
-				className={`fixed inset-0 z-[3] transition-all duration-300 md:z-[4] ${
+				className={`fixed inset-0 z-[3] transition-all duration-300 md:z-[5] ${
 					sidebarToggle || active
-						? "bg-black/30 pointer-events-auto"
+						? "bg-black/40 dark:bg-black/60 pointer-events-auto"
 						: "bg-transparent pointer-events-none"
 				}`}
 				onClick={sidebarToggle ? togglerOnClick : handleActive}
 			></div>
-			<SearchBox active={active} onClose={handleActive} />
+			<SearchModal active={active} onClose={handleActive} />
 		</>
 	);
 };

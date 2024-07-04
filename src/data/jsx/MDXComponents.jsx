@@ -71,14 +71,16 @@ export const mdxComponents = {
 	blockquote(props) {
 		return (
 			<blockquote
-				className="not-italic border bg-zinc-50 !p-4 [&>p]:!m-0 rounded-xl [&>p::before]:content-[''] font-normal [&_strong]:font-medium"
+				className="not-italic my-6 rounded-xl border border-zinc-200 dark:border-zinc-800 backdrop-blur-xl bg-zinc-200/20 dark:bg-zinc-700/40 !py-3 !px-4 [&>p]:!m-0 [&>p::before]:content-[''] font-normal [&_strong]:font-medium text-[0.95rem]"
 				{...props}
 			/>
 		);
 	},
-	Article(props) {
+	Article({ className, children }) {
 		return (
-			<article className="prose lg:prose-lg dark:prose-invert" {...props} />
+			<article className={`prose lg:prose-lg dark:prose-invert ${className}`}>
+				{children}
+			</article>
 		);
 	},
 	code(props) {

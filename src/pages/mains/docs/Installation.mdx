@@ -1,5 +1,5 @@
 import { currentVersion } from "@/data/js/constants";
-import { Timeline } from "@/components"
+import { Steps, Step, HighlightedCode } from "@/components";
 import { Helmet } from "react-helmet-async";
 
 <Helmet>
@@ -15,109 +15,106 @@ To install you can either use <span className="inline-flex gap-2 items-center tr
 
 ## Vite
 
-<Timeline
-  data={[
-    {
-      id: 1,
-      heading: "Create a project",
-      html: `Start by creating a new project using <code class="code">Vite</code>:`,
-      code: {
-        lang: "bash",
-        code: `npm create vite@latest ./`
-      }
-    },
-    {
-     id: 2,
-     heading: "Install TailwindCSS and LuxeyUI",
-     html: `Install <code class="code">tailwindcss</code> and its peer dependencies, then generate your <code class="code">tailwind.config.js</code> and <code class="code">postcss.config.js</code> files and configure them as needed along with the library itself:`,
-     code: {
-      lang: "bash",
-      code: `npm i -D tailwindcss postcss autoprefixer luxeyui@latest
-npx tailwindcss init -p`
-     }
-    },
-    {
-      id: 3,
-      heading: "Configure tailwind",
-      html: `Add the following code to your <code class="code">tailwind.config.js</code> file if you want to use dark mode:`,
-      code: {
-        lang: "js",
-        code: `/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: "class",
-  content: [
-    "./index.html",
-    "./node_modules/luxeyui/dist/all.min.js"
-  ]
-}`
-      }
-    },
-    {
-      id: 4,
-      heading: "That's it",
-      text: "Now you can start your designing using components with full functionality.",
-      code: { lang: "html", code: `<button class="button primary">Button</button>` }
+<Steps>
+  <Step heading="Create a project">
+    Start by creating a new project using `Vite`.
+    ```bash
+      npm create vite@latest luxeyui-project
+      cd luxeyui-project
+    ```
+  </Step>
+  <Step heading="Install TailwindCSS and LuxeyUI">
+    Install `tailwindcss` and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` file and configure them as needed along with the library itself:
+    ```bash 
+    npm i -D tailwindcss postcss autoprefixer
+    npm i luxeyui@latest
+    npx tailwindcss init -p
+    ```
+  </Step>
+  <Step heading="Configure TailwindCSS & PostCSS">
+    Add the following code to your `tailwind.config.js` file:
+    ```js 
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+      darkMode: "class",
+      content: [
+        "./index.html",
+        "./node_modules/luxeyui/dist/all.min.js"
+      ]
+      // ...
     }
-  ]}
-/>
+    ```
+    > **Note**: You must follow this step if you want to make your CSS `build` size smaller. 
+    
+    TailwindCSS will recommend you to use their `'tailwindcss/nesting'` plugin for all browser support. For more details on that one, visit <ELink text="TailwindCSS Nesting" link="https://tailwindcss.com/docs/using-with-preprocessors#nesting"/> documentation.
+    
+    But, all modern browsers now support CSS Nesting. Check the <ELink text="Browser Support" link="https://caniuse.com/?search=CSS%20Nesting"></ELink> on CanIUse. So you don't actually need that plugin. Using it will almost double your CSS `build` size. 
+    
+    If you are willing to support old browsers, you might use it. 
+    
+    This is what your `postcss.config.js` file should look like: 
+    
+    ```js
+    module.exports {
+      plugins: {
+        // 'tailwindcss/nesting': {}, ← Only use if you want.
+        tailwindcss: {},
+        autoprefixer: {}
+      }
+    }
+    ```
+  </Step>
+  <Step heading="That's it">
+    Now you can start your designing using components with full functionality.
+    ```html
+    <button class="button primary">Button</button>
+    ```
+  </Step>
+</Steps>
 
 ---
 
-## HTML 
+## HTML
 
-<Timeline
-  data={[
-    {
-      id: 1,
-      heading: "Create a boilerplate",
-      html: `Start by creating a basic HTMl template in your <code class="code">index.html</code> file. You can copy & paste the code given below.`,
-      code: {
-        lang: "html",
-        code: `<!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta charset="UTF-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  	<title>LuxeyUI Project</title>
-	</head>
-	<body></body>
-</html>`
-      }
-    },
-    {
-      id: 2,
-      heading: "Add the CDN",
-      text: "Add the stylesheet and script to your HTML file. You can add TailwindCSS for better customization.",
-      code: {
-        lang: "html",
-        code: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
+<Steps>
+  <Step heading="Create a boilerplate">
+    Start by creating a basic `HTML` template.
+    ```html 
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LuxeyUI Project</title>
+      </head>
+      <body></body>
+    </html>
+    ```
+  </Step>
+  <Step heading="Add the CDNs">
+    Add the necessary CDNs in your project. I'd recommend to use TailwindCSS to make your life a lot easier.
+    <HighlightedCode
+      code={`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>`
-      }
-    },
-    {
-      id: 3,
-      heading: "Configure tailwind",
-      text: `Add the following code to your script if you want to use dark mode:`,
-      code: {
-        lang: "html",
-        code: `<script>
-  tailwind.config = {
-    darkMode: "class",
-    content: ["./index.html"]
-  }
-</script>`
-      }
-    },
-    {
-      id: 4,
-      heading: "That's it",
-      text: "Now you can start your designing using components with full functionality.",
-      code: { lang: "html", code: `<button class="button primary">Button</button>` }
+<script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>`} />
+  </Step>
+  <Step heading="Configure TailwindCSS">
+    Copy & Paste this code in your project's `tailwind.config.js` file.
+    ```js 
+    tailwind.config = {
+      darkMode: "class",
+      content: ["index.html"]
+      // ...
     }
-  ]}
-/>
+    ```
+  </Step>
+  <Step heading="That's it">
+    Now you can start your designing using components with full functionality.
+    ```html
+    <button class="button primary">Button</button>
+    ```
+  </Step>
+</Steps>
 
 </Article>
-
