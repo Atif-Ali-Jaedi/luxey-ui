@@ -1,5 +1,5 @@
-import CodePreview from "@/utils/CodePreview"
-import {inputCodes} from "@/data/component-codes/input"
+import CodePreview from "@/utils/CodePreview";
+import { inputCodes } from "@/data/component-codes/input";
 
 <BCrumbs data={["Docs","Components","Input"]}/>
 <Article>
@@ -10,63 +10,89 @@ A component that allows users to enter text or numbers or other characters.
 
 ## Slots
 
-- <HL>input-base</HL>: Input wrapper, it handles alignment, placement, and general appearance.
-- <HL>input-label</HL>: Label of the input, it is the one that is displayed above, inside or left of the input. 
-- <HL>input-main-wrapper</HL>: Wraps the `input-wrapper` when position of the label is `outside` or `outside-left`.
-- <HL>input-wrapper</HL>: Wraps the `input-label` (when it is inside) and the `inner-wrapper`.
-- <HL>inner-wrapper</HL>: Wraps the `input` and the content before / after the `input`.
-- <HL>input</HL>: The input element.
+- **input-base**: Input wrapper, it handles alignment, placement, and general appearance.
+- **input-label**: Label of the input, it is the one that is displayed above, inside or left of the input.
+- **input-main-wrapper**: Wraps the `input-wrapper` when position of the label is `outside` or `outside-left`.
+- **input-wrapper**: Wraps the `input-label` (when it is inside) and the `inner-wrapper`.
+- **inner-wrapper**: Wraps the `input` and the content before / after the `input`.
+- **input**: The input element.
+- **helper-wrapper**: Wraps the `description` and the `error-msg`.
+- **description**: The description od the input.
+- **error-msg**: The error message of the input.
 
 ## Usage
 
-<CodePreview code={{code: inputCodes.usage}}/>
+<CodePreview code={{ code: inputCodes.usage }} />
 
 ## Disabled
 
-<CodePreview code={{code: inputCodes.disabled}}/>
+<CodePreview code={{ code: inputCodes.disabled }} />
 
 ## Read Only
 
-<CodePreview code={{code: inputCodes.readonly}}/>
+<CodePreview code={{ code: inputCodes.readonly }} />
 
 ## Required
 
 If you add the `required` attribute to the input, it'll have a `danger` asterisk at the end of the label.
 
-<CodePreview code={{code: inputCodes.required}}/>
+<CodePreview code={{ code: inputCodes.required }} />
 
 ## Sizes
 
-<CodePreview code={{code: inputCodes.sizes}}/>
+<CodePreview code={{ code: inputCodes.sizes }} />
 
 ## Colors
 
-<CodePreview code={{code: inputCodes.colors}}/>
+<CodePreview code={{ code: inputCodes.colors }} />
 
 ## Variants
 
-<CodePreview code={{code: inputCodes.variants}}/>
+<CodePreview code={{ code: inputCodes.variants }} />
 
 ## Radius
 
-<CodePreview code={{code: inputCodes.radius}}/>
+<CodePreview code={{ code: inputCodes.radius }} />
 
 ## Label Placements
 
 You can change the position of the label by making it a `child` of the `input-main-wrapper` and after doing that, adding `outside-left` class to the `label` or just putting it inside the `input-wrapper`.
 
-<CodePreview code={{code: inputCodes.labelPlacements}}/>
+<CodePreview code={{ code: inputCodes.labelPlacements }} />
 
 ## Clear Button
 
 If you add the `data-input-clearable` attribute to the `input-base` and it to `true`, it will have a clear button at the end of the input and will be visible when the input has a value.
 
-<CodePreview code={{code: inputCodes.isClearable}}/>
+<CodePreview code={{ code: inputCodes.isClearable }} />
 
+## Start & End Content
 
-<CompsLinks 
-  last={{link: "../divider", text: "Divider"}} 
-  next={{link: "../link", text: "Link"}} 
+To add content before or after the `input`. Simply add those before or after the `input`. The following examples is the same as <ELink text="NextUI" link="https://nextui.org/docs/components/input" />'s examples. Those are:
+
+<CodePreview code={{ code: inputCodes.startAndEndContent }} />
+
+## With Description
+
+You can add a description for the input using the `description` element as following:
+
+<CodePreview code={{ code: inputCodes.withDescription }} />
+
+## With Error Message
+
+To display an error message, you need to add a `error-msg` in your `helper-wrapper`. But, you'll also need to add `data-validate` attribute to `input-base`.
+
+> **Note**: To display a fixed invalid state, you'll need to add `data-invalid` attribute to the `input` and set it to `true`.
+
+<CodePreview code={{ code: inputCodes.withErrorMessage }} />
+
+You won't need the `data-invalid` attribute if you want to validate using the css `:invalid` pseudo-class. An example with `regex` email validation:
+
+<CodePreview code={{ code: inputCodes.emailValidation }} />
+
+<CompsLinks
+  last={{ link: "../divider", text: "Divider" }}
+  next={{ link: "../link", text: "Link" }}
 />
 
 </Article>

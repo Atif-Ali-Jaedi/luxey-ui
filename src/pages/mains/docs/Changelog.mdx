@@ -13,6 +13,30 @@ import { Helmet } from "react-helmet-async";
 
 All the notable changes are listed here, ranging from super small updates to huge ones.
 
+<Chip>v0.3.3</Chip>
+<Time>August 10, 2024</Time>
+
+## Updated Input component Again
+
+I've made some errors in the last update, so I had to release this one. 
+
+ - Added transparent background instead of just solid background, `bg-layout-bg → bg-transparent`.
+ - Added a gap between the content before / after the `input`, inside `inner-wrapper`, `gap-px → gap-1.5`.
+
+<Chip>v0.3.2</Chip>
+<Time>August 10, 2024</Time>
+
+## Updated Input component
+
+I've done the following things with this component:
+
+ - Adjusted the border width, `2.5px → 2px`
+ - Adjusted the radius for `sizes` & `radiuses` 
+ - Added the `helper-wrapper`
+ - Added the `description` & `error-msg` for `helper-wrapper`
+ - Added validation for the input to display error only when needed. 
+ - Fixed and issue higher the colours of the borders doesn't appear on focus because of the specificity issue.
+
 <Chip>v0.3.1</Chip>
 <Time>June 30, 2024</Time>
 
@@ -20,11 +44,11 @@ All the notable changes are listed here, ranging from super small updates to hug
 
 This was a huge update. I've added so many things and redesigned the entire website. For full details, please visit [Introducing LuxeyUI v0.3.0](http://localhost:5173/blog/Introducing%20v0.3.0).
 
-- <HL>Dark Mode</HL>: After a long time I finally added dark mode. 
-- <HL>Theming</HL>: The ability to customize the original theme colors within your css by using css variables. 
-- <HL>Better Customization</HL>: Now, it's a lot easier to customize the components. 
-- <HL>Input</HL>: Added the most requested component "input".
-- <HL>Components</HL>: Fixed the badge and the button component. Also remade entirely the card and the textarea component and Adjusted all the components for darkmode. 
+- **Dark Mode**: After a long time I finally added dark mode. 
+- **Theming**: The ability to customize the original theme colors within your css by using css variables. 
+- **Better Customization**: Now, it's a lot easier to customize the components. 
+- **Input**: Added the most requested component "input".
+- **Components**: Fixed the badge and the button component. Also remade entirely the card and the textarea component and Adjusted all the components for darkmode. 
 
 <Chip>v0.2.1</Chip>
 <Time>February 21, 2024</Time>
@@ -72,5 +96,7 @@ There wasn't much, It was just a simple test. I had added:
 
 - Theme 
 - Avatar
+
+<wbr/>
 
 </Article>

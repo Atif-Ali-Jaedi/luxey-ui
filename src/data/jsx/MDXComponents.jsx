@@ -62,8 +62,8 @@ export const mdxComponents = {
 	},
 	HL(props) {
 		return (
-			<span
-				className="text-pink-500 font-medium dark:text-sky-500"
+			<strong
+				className="text-pink-500 font-medium dark:text-cyan-500"
 				{...props}
 			/>
 		);
@@ -78,7 +78,12 @@ export const mdxComponents = {
 	},
 	Article({ className, children }) {
 		return (
-			<article className={`prose lg:prose-lg dark:prose-invert ${className}`}>
+			<article
+				className={twMerge(
+					`prose lg:prose-lg dark:prose-invert [&_ul>li>strong]:text-pink-500 [&_ul>li>strong]:font-medium dark:[&_ul>li>strong]:text-cyan-500`,
+					className
+				)}
+			>
 				{children}
 			</article>
 		);
