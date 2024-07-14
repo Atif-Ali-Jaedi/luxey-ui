@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button, Blog } from "@/components";
 import { ArrowRight } from "lucide-react";
-import blogs from "@/data/blogs/blogs";
+import blogs from "@/pages/blogs";
 
 export const Blogs = () => {
 	return (

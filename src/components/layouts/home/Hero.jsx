@@ -10,10 +10,10 @@ export const Hero = () => (
 				<Command size={18} />{" "}
 				<span className="text-zinc-400 dark:text-zinc-600">|</span>
 				<Link
-					to="/blog/Introduction to dark mode"
+					to="/blog/Introducing v0.4.0"
 					className="no-underline flex items-center gap-2"
 				>
-					Introducing Dark Mode 🎉 <ArrowRight size={18} />
+					Introducing v0.4.0 🎉 <ArrowRight size={18} />
 				</Link>
 			</span>
 			<h1 className="!mt-6">

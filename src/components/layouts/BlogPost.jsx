@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import blogs from "@/data/blogs/blogs";
+import blogs from "@/pages/blogs";
 import { mdxComponents } from "@/data/jsx/MDXComponents";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -12,12 +12,12 @@ export const BlogPost = () => {
 			<h1 className="text-center font-bold dark:text-white">Blog not found</h1>
 		);
 	return (
-		<article className="prose lg:prose-lg dark:prose-invert mx-auto mb-20">
+		<article className="prose lg:prose-lg dark:prose-invert mx-auto mb-20 [&_:is(ul,ol)>li>strong]:text-pink-500 [&_:is(ul,ol)>li>strong]:font-medium dark:[&_:is(ul,ol)>li>strong]:text-cyan-500">
 			<Helmet>
 				<title>
 					{blog.name} | LuxeyUI - Elevate your design effortlessly and quickly
 				</title>
-<meta name="description" content={blog.description}/>
+				<meta name="description" content={blog.description} />
 			</Helmet>
 			<Link
 				to="/blog"

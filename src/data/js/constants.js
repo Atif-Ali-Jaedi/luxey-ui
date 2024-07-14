@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Icodethis } from "@/assets";
 
-const currentVersion = "0.3.3";
+const currentVersion = "0.4.0";
 
 const navLinks = [
 	{ id: 1, name: "Documentation", link: "/docs" },
