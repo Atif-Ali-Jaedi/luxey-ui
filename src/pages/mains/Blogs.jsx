@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Blog } from "@/components";
-import blogs from "../blogs/";
+import blogs from "@/pages/blogs";
 const blogCategories = ["All Posts", "Changelog", "Announcement"];
 import { Helmet } from "react-helmet-async";
 

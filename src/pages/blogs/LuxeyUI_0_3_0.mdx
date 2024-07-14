@@ -1,0 +1,207 @@
+import { Steps, Step } from "@/components";
+import { currentVersion } from "@/data/js/constants";
+import CodePreview from "@/utils/CodePreview";
+
+I'm excited to announce the latest update to LuxeyUI, version **0.3.0**! This release introduces several exciting features and improvements that I can't wait to share with you.
+
+### What's New in v0.3.0?
+
+- **Dark Mode**: Finally added a sleek dark mode.
+- **Theming**: Customize the original theme colors using CSS variables.
+- **Better Customization**: Enhanced customization options for components.
+- **Input**: Added the most requested component, "input".
+- **Component Enhancements**: Fixed the badge and button components, completely revamped the card and textarea components, and adjusted all components for dark mode.
+
+## Dark Mode
+
+Enabling Dark Mode in your projects is straightforward. Follow these simple steps:
+
+<Steps>
+  <Step heading="Update the Library">
+    Ensure you're using the latest version of LuxeyUI.
+    Use this if you're using CDN:
+    ```html
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/luxeyui@${currentVersion}/dist/all.min.js" defer></script>
+    ```
+    Use this if you're installing via npm:
+    ```bash
+    npm i luxeyui@latest
+    ```
+  </Step>
+  <Step heading="Enable Dark Mode">
+    To enable dark mode, add one of these snippets to your `tailwind.config.js` file:
+    ```js
+    tailwind.config = { darkMode: "class" } // For CDN
+    ```
+    ```js
+    module.exports = {
+      darkMode: "class",
+      // ...
+    }
+    ```
+  </Step>
+  <Step heading="Customize as Needed">
+    Modify your CSS file to tweak dark mode to suit your design needs. Use `hsla` format without the parenthesis and `hsla` to customize colors:
+    ```css
+    :root.dark {
+      --base-primary: 188.6 100% 46.7%;
+      --content-4: 0 0% 99.6%;
+    }
+    ```
+  </Step>
+  <Step heading="Add the Toggle Functionality">
+    Add functionality for toggling dark mode. For example:
+    ```html
+    <input type="checkbox" id="toggler" class="switch" />
+    <script>
+      document.querySelector("#toggler").addEventListener("click", e => {
+        document.documentElement.className = e.target.checked ? "dark" : "";
+      });
+    </script>
+    ```
+  </Step>
+</Steps>
+
+## Components
+
+### Input
+
+The new Input component allows users to enter text easily. For full details, please view the [Input Docs](/docs/components/input).
+
+<CodePreview
+  code={{
+    code: `<div class="input-base" data-input-clearable="true">
+  <div class="input-wrapper">
+    <label for="input" class="input-label">Name</label>
+    <div class="inner-wrapper">
+      <input 
+        type="text" 
+        id="input" 
+        placeholder="Enter your name"
+      />
+    </div>
+  </div>
+</div>`,
+  }}
+/>
+
+### Button
+
+I've fixed an issue where the ripple color didn't match the button color. Now, it checks for the `currentColor` of the button and applies the same color to the ripple.
+
+<CodePreview
+  code={{
+    code: `<div class="wrapper inline-flex gap-4 m-2">
+  <button class="button">Solid</button>
+  <button class="button warning solid">Solid</button>
+  <button class="button warning faded">Faded</button>
+  <button class="button warning bordered">Bordered</button>
+  <button class="button warning light">Light</button>
+  <button class="button warning flat">Flat</button>
+  <button class="button warning ghost">Ghost</button>
+  <button class="button warning shadow">Shadow</button>
+</div>`,
+  }}
+/>
+
+### Badge
+
+I've adjusted the placement of the badge. Now, you can use the `--_v` variable to customize the badge's position.
+
+<CodePreview
+  code={{
+    code: `<div class="avatar my-4 badge-container">
+  <img src="https://i.pravatar.cc/150?eu=10"/>
+  <span class="badge danger">5</span>
+</div>
+<div class="avatar my-4 badge-container">
+  <img src="https://i.pravatar.cc/150?eu=15"/>
+  <span class="badge success size-sm bottom-right [--_v:10%]"></span>
+</div>`,
+  }}
+/>
+
+### Card
+
+I've fully revamped the Card component with updated styles and added a pressable effect using `data-pressable`.
+
+<CodePreview
+  code={{
+    code: `<div class="card m-2">
+  <div class="card-header !justify-between">
+    <div class="user">
+      <div class="avatar">
+        <img src="https://i.pravatar.cc/150?eu=15"/>
+      </div>
+      <div class="user-info">
+        <span class="name">Jane Doe</span>
+        <small class="profession">Frontend Dev</small>
+      </div>
+    </div>
+    <button class="button foreground size-sm">Follow</button>
+  </div>
+  <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nesciunt alias ipsa officia, eligendi obcaecati assumenda iusto repellendus facere repudiandae excepturi quas dicta! Saepe, cupiditate nihil reiciendis dolores illo odit.</div>
+  <div class="card-footer text-sm gap-3">
+    <div class="flex gap-1">
+      <p class="font-semibold">29</p>
+      <p class="text-[hsl(var(--default-400))]">Following</p>
+    </div>
+    <div class="flex gap-1">
+      <p class="font-semibold">397.1K</p>
+      <p class="text-[hsl(var(--default-400))]">Followers</p>
+    </div>
+  </div>
+</div>`,
+  }}
+/>
+
+Using `data-pressable="true"` to make the card pressable like a button:
+
+<CodePreview
+  code={{
+    code: `<div class="card m-2 active:scale-95 transition-transform duration-300 max-w-xs" data-pressable="true">
+  <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, cumque. Magnam sed ipsam dolores, aliquid accusamus sint molestiae, cupiditate esse explicabo laudantium in, id tenetur quam excepturi asperiores! Nulla, provident!</div>
+</div>`,
+  }}
+/>
+
+### Textarea
+
+Here’s what I’ve done with the Textarea component:
+
+- Remade the variants including spacing and labels.
+- Completely revamped the functionality of `minRow` and `maxRow`.
+- Added a `debounce` effect to prevent bugs while deleting text.
+- Animated the height increment and decrement.
+
+For full details, please view the [Textarea Docs](/docs/components/textarea).
+
+<CodePreview
+  iframeHeight={150}
+  code={{
+    lang: "html",
+    code: `<div class="textarea-outerbox">
+  <div class="textarea-innerbox">
+    <label for="textarea">Description</label>
+    <textarea 
+      name="textarea" 
+      id="textarea" 
+      placeholder="Enter your description"
+      data-min-row="2"
+      data-max-row="5"
+    ></textarea>
+  </div>
+</div>`,
+  }}
+/>
+
+### Theming
+
+Theming allows you to have more control over the colors and styles of components. Simply modify the variables in your CSS file. For full details about theming, please visit the [Theme Docs](/docs/theme).
+
+---
+
+I hope you enjoy these new features and improvements as much as I enjoyed creating them. Your feedback is invaluable, so please let me know what you think and what you’d like to see next in LuxeyUI!
+
+**Happy Coding! 🎉**

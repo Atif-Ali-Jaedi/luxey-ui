@@ -1,0 +1,163 @@
+I'm thrilled to announce the release of LuxeyUI version 0.4.0! This update brings four brand new components along with some minor bug fixes. Let's dive into the details!
+
+## What's New in v0.4.0?
+
+### New Components
+
+- **Progress**: Visualize progress with ease.
+- **Scroll Shadow**: Add elegant shadows while scrolling.
+- **KBD**: Display keyboard keys stylishly.
+- **Checkbox Group**: Manage groups of checkboxes efficiently.
+
+### Bug Fixes
+
+- **Radio Group**: Improved readability by adjusting `radio-group-label` color from `text-foreground/70` to `text-default-700`.
+
+## Breakdown of New Components
+
+### Scroll Shadow
+
+The Scroll Shadow component adds dynamic top and bottom shadows when content overflows, enhancing the visual appeal of your scrollable areas. For comprehensive usage details, please visit the [Scroll Shadow Documentation](/docs/components/scroll-shadow).
+
+<CodePreview code={`<div class="scroll-shadow overflow-y-scroll h-[300px]">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dignissimos corrupti nisi quo consequatur obcaecati officia aspernatur nulla a assumenda doloribus error vitae quae autem soluta iste blanditiis ducimus, neque nihil adipisci itaque rerum officiis saepe! Atque necessitatibus esse, officiis quaerat! Maiores nemo ipsam cum numquam, beatae excepturi id dolorum, sequi itaque dolor sit. Accusamus, fuga odit, repudiandae consequuntur error minima, possimus illum, ipsum recusandae assumenda quidem! Ad, iusto molestias, expedita facere distinctio eaque suscipit odit maiores magni natus veritatis dolore cupiditate recusandae iste. Fuga ipsam, soluta voluptate necessitatibus impedit expedita ea qui perspiciatis officia, amet quod, cupiditate molestiae harum.
+  </p>
+</div>`} />
+
+
+### KBD
+
+The KBD component is perfect for showcasing keyboard shortcuts and key combinations in a visually appealing manner. To learn more, check out the [KBD Documentation](/docs/components/kbd).
+
+<CodePreview code={`<div class="kbd m-1" data-keys="command">
+  <span class="content">K</span>
+</div>`} />
+
+### Progress
+
+Easily track the progress of tasks with the Progress component. It provides a clear visual indicator of completion percentage. For more information, visit the [Progress Documentation](/docs/components/progress).
+
+<CodePreview code={`<div class="progress-base" data-value="63%">
+  <div class="label-wrapper">
+    <span class="label">Loading...</span>
+    <span class="value"></span>
+  </div>
+  <div class="track">
+    <div class="indicator"></div>
+  </div>
+</div>`} />
+
+### Checkbox Group
+
+The Checkbox Group component allows users to select multiple items from a list of choices, making it ideal for settings and preferences. For full usage details, please see the [Checkbox Group Documentation](/docs/components/checkbox-group).
+
+<CodePreview code={`<div class="checkbox-group">
+  <label class="checkbox-group-label">Select Cities</label>
+  <div class="checkboxes">
+    <label for="checkbox1" class="checkbox-wrapper primary">
+      <div class="checkbox-icon">
+        <svg viewBox="0 0 17 18">
+          <polyline
+            fill="none"
+            points="1 9 7 14 15 4"
+            stroke="currentColor"
+            stroke-dasharray="22"
+            stroke-dashoffset="66"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          ></polyline>
+        </svg>
+        <input type="checkbox" id="checkbox1" class="checkbox" checked />
+      </div>
+      <span class="checkbox-label">Buenos Aires</span>
+    </label>
+    <label for="checkbox2" class="checkbox-wrapper primary">
+      <div class="checkbox-icon">
+        <svg viewBox="0 0 17 18">
+          <polyline
+            fill="none"
+            points="1 9 7 14 15 4"
+            stroke="currentColor"
+            stroke-dasharray="22"
+            stroke-dashoffset="66"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          ></polyline>
+        </svg>
+        <input type="checkbox" id="checkbox2" class="checkbox" checked />
+      </div>
+      <span class="checkbox-label">Sydney</span>
+    </label>
+    <label for="checkbox3" class="checkbox-wrapper primary">
+      <div class="checkbox-icon">
+        <svg viewBox="0 0 17 18">
+          <polyline
+            fill="none"
+            points="1 9 7 14 15 4"
+            stroke="currentColor"
+            stroke-dasharray="22"
+            stroke-dashoffset="66"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          ></polyline>
+        </svg>
+        <input type="checkbox" id="checkbox3" class="checkbox" checked />
+      </div>
+      <span class="checkbox-label">San Francisco</span>
+    </label>
+    <label for="checkbox4" class="checkbox-wrapper primary">
+      <div class="checkbox-icon">
+        <svg viewBox="0 0 17 18">
+          <polyline
+            fill="none"
+            points="1 9 7 14 15 4"
+            stroke="currentColor"
+            stroke-dasharray="22"
+            stroke-dashoffset="66"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          ></polyline>
+        </svg>
+        <input type="checkbox" id="checkbox4" class="checkbox" checked />
+      </div>
+      <span class="checkbox-label">London</span>
+    </label>
+    <label for="checkbox5" class="checkbox-wrapper primary">
+      <div class="checkbox-icon">
+        <svg viewBox="0 0 17 18">
+          <polyline
+            fill="none"
+            points="1 9 7 14 15 4"
+            stroke="currentColor"
+            stroke-dasharray="22"
+            stroke-dashoffset="66"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          ></polyline>
+        </svg>
+        <input type="checkbox" id="checkbox5" class="checkbox" checked />
+      </div>
+      <span class="checkbox-label">Tokyo</span>
+    </label>
+  </div>
+</div>`} />
+
+## What's Next? 
+
+- **Bug Fixes**: Fixing many bugs that hinder your experience.
+- **Performance Enhancements**: Continued focus on optimizing performance
+  across all components.
+- **New Components**: Expanding my library with new components and
+  utilities to make your development faster and easier.
+
+--- 
+
+I hope you enjoy these new components and enhancements in LuxeyUI v0.4.0. As always, your feedback is invaluable to me. Please let me know your thoughts and suggestions for future improvements!
+
+**Thank you for your continued support and happy coding! 🎉**
