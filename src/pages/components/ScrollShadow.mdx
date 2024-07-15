@@ -1,0 +1,32 @@
+import { scrollShadowCodes } from "@/data/component-codes/scroll-shadow"
+
+<BCrumbs data={["Docs", "Components", "Scroll Shadow"]}/>
+
+<Article>
+
+# Scroll Shadow 
+
+Applies top or bottom or both shadows when content overflows on scroll.
+
+## Usage
+
+<CodePreview code={scrollShadowCodes.usage} />
+
+## Custom Shadow Size
+
+By default, the shadow size is `40` in pixels, but you can change it using the `--scroll-shadow-size` variable.
+
+<CodePreview code={scrollShadowCodes.customShadowSize} />
+
+## Horizontal 
+
+In case you need to apply the shadow on the horizontal scroll, you can set the `data-orientation` attribute to `horizontal`.
+
+<CodePreview code={scrollShadowCodes.horizontal} />
+
+<CompsLinks
+  last={{ link: "../skeleton", text: "Skeleton" }}
+  next={{ link: "../switch", text: "Switch" }}
+/>
+
+</Article>

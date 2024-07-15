@@ -6,6 +6,7 @@ import { Copy } from "lucide-react";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
 import "prismjs/plugins/match-braces/prism-match-braces";
 import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-bash";
 
 const Highlight = ({

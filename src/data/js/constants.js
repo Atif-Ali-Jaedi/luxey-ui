@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Icodethis } from "@/assets";
 
-const currentVersion = "0.4.0";
+const currentVersion = "0.4.1";
 
 const navLinks = [
 	{ id: 1, name: "Documentation", link: "/docs" },
@@ -24,18 +24,30 @@ const components = [
 	{ name: "Avatar", link: "/docs/components/avatar" },
 	{ name: "Accordion", link: "/docs/components/accordion" },
 	{ name: "Badge", link: "/docs/components/badge" },
-	{ name: "Button", link: "/docs/components/button", chip: "Updated" },
-	{ name: "Card", link: "/docs/components/card", chip: "Updated" },
+	{ name: "Button", link: "/docs/components/button" },
+	{ name: "Card", link: "/docs/components/card" },
 	{ name: "Checkbox", link: "/docs/components/checkbox" },
+	{
+		name: "Checkbox Group",
+		link: "/docs/components/checkbox-group",
+		chip: "New"
+	},
 	{ name: "Chip", link: "/docs/components/chip" },
 	{ name: "Code", link: "/docs/components/code" },
 	{ name: "Divider", link: "/docs/components/divider" },
-	{ name: "Input", link: "/docs/components/input", chip: "New" },
+	{ name: "Input", link: "/docs/components/input", chip: "Updated" },
+	{ name: "Kbd", link: "/docs/components/kbd", chip: "New" },
 	{ name: "Link", link: "/docs/components/link" },
-	{ name: "Radio", link: "/docs/components/radio" },
-	{ name: "Skeleton", link: "/docs/components/skeleton", chip: "Updated" },
+	{ name: "Progress", link: "/docs/components/progress", chip: "New" },
+	{ name: "Radio", link: "/docs/components/radio", chip: "Updated" },
+	{ name: "Skeleton", link: "/docs/components/skeleton" },
+	{
+		name: "Scroll Shadow",
+		link: "/docs/components/scroll-shadow",
+		chip: "New"
+	},
 	{ name: "Switch", link: "/docs/components/switch" },
-	{ name: "Textarea", link: "/docs/components/textarea", chip: "Updated" },
+	{ name: "Textarea", link: "/docs/components/textarea" },
 	{ name: "User", link: "/docs/components/user" }
 ];
 

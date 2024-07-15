@@ -1,0 +1,52 @@
+import { radioCodes } from "../../data/component-codes/radio";
+
+<BCrumbs data={["Docs", "Components", "Radio"]} />
+
+<Article>
+
+# Radio
+
+Radio buttons—where only one of the buttons can be checked or selected.
+
+## Slots
+
+- **radio-group**: The container of the radios.
+- **radio-group-label**: The label of the radio-group.
+- **radios**: The wrapper of the radio elements.
+- **radio**: The radio box.
+- **input:radio**: The radio input
+- **radio-label**: The label of the radio input
+- **description**: The description of the radio input
+
+## Usage
+
+<CodePreview code={radioCodes.default} />
+
+> **Note**: You can you the `.radio` separately without needing the `.radio-group`.
+
+## Disabled
+
+<CodePreview code={radioCodes.disabled} />
+
+## With description
+
+<CodePreview code={radioCodes.withDescription} />
+
+## Horizontal
+
+<CodePreview code={radioCodes.horizontal} />
+
+## Invalid
+
+<CodePreview code={radioCodes.invalid} />
+
+## Colors
+
+<CodePreview code={radioCodes.colors} />
+
+<CompsLinks
+  last={{ link: "../progress", text: "Progress" }}
+  next={{ link: "../skeleton", text: "Skeleton" }}
+/>
+
+</Article>

@@ -1,0 +1,55 @@
+import { kbdCodes } from "@/data/component-codes/kbd"
+
+<BCrumbs data={["Docs", "Components", "Kbd"]}/>
+
+<Article>
+
+# Keyboard Key 
+
+Keyboard key is a component to display which key or combination of keys performs a given action.
+
+## Slots
+
+- **kbd**: Kbd wrapper, it handles alignment, placement, and general appearance.
+- **abbr**: The `keys` wrapper that handles the appearance of the keys which is added dynamically.
+- **content**: The children wrapper that handles the appearance of the content.
+
+## Usage
+
+<CodePreview code={kbdCodes.usage} />
+
+### Keys 
+
+<CodePreview code={kbdCodes.keys} />
+
+> **Note**: Check the following list to see all the available keys.
+
+```ts 
+type KbdKey =
+  | "command"
+  | "shift"
+  | "ctrl"
+  | "option"
+  | "enter"
+  | "delete"
+  | "escape"
+  | "tab"
+  | "capslock"
+  | "up"
+  | "right"
+  | "down"
+  | "left"
+  | "pageup"
+  | "pagedown"
+  | "home"
+  | "end"
+  | "help"
+  | "space";
+```
+
+<CompsLinks
+  last={{ link: "../input", text: "Input" }}
+  next={{ link: "../link", text: "Link" }}
+/>
+
+</Article>

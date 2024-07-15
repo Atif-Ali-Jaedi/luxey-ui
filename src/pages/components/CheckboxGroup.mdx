@@ -1,0 +1,46 @@
+import { checkboxGroupCodes } from "@/data/component-codes/checkboxGroup";
+
+<BCrumbs data={["Docs", "Components", "Checkbox Group"]} />
+
+<Article>
+
+# Checkbox Group
+
+A Checkbox Group allows users to select one or more items from a list of choices.
+
+## Slots
+
+- **checkbox-group**: Checkbox Group root wrapper which wraps `checkboxes`, `checkbox-group-label`, `description` and `error-msg`.
+- **checkbox-group-label**: Checkbox group label, it is placed before the wrapper.
+- **checkboxes**: Checkbox group wrapper, it wraps all checkboxes.
+- **description**: The description of the checkbox group.
+- **error-msg**: The error message of the checkbox group.
+
+## Usage
+
+<CodePreview code={checkboxGroupCodes.usage} />
+
+## Disabled
+
+You can disable all the checkbox at once using the `data-disabled` attribute to the `checkbox-group`.
+
+<CodePreview code={checkboxGroupCodes.disabled} />
+
+## Horizontal
+
+You can make the checkboxes appear horizontally using the `data-orientation` attribute and set it to `horizontal` to the `checkbox-group`.
+
+<CodePreview code={checkboxGroupCodes.horizontal} />
+
+## Invalid
+
+You can use the `data-invalid` attribute and set it to `true` in order to display an invalid state. For example:
+
+<CodePreview code={checkboxGroupCodes.invalid} />
+
+<CompsLinks
+  last={{ link: "../checkbox", text: "Checkbox" }}
+  next={{ link: "../chip", text: "Chip" }}
+/>
+
+</Article>

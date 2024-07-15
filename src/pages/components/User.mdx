@@ -1,0 +1,28 @@
+import { userCodes } from "@/data/component-codes/user";
+
+<BCrumbs data={["Docs", "Components", "User"]} />
+
+<Article>
+
+# User
+
+Display user information with avatar and name and description.
+
+## Slots
+
+- **user**: The main user container.
+- **user-info**: The name & description info.
+- **name**: The name of the user.
+- **description**: The description of the user.
+
+## Usage
+
+<CodePreview code={userCodes.default} />
+
+## Another Example
+
+<CodePreview code={userCodes.customized} />
+
+<CompsLinks last={{ link: "../textarea", text: "Textarea" }} />
+
+</Article>

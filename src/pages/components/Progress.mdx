@@ -1,0 +1,69 @@
+import { progressCodes } from "@/data/component-codes/progress"
+
+<BCrumbs data={["Docs", "Components", "Progress"]}/>
+
+<Article>
+
+# Progress 
+
+The Progress component allows you to view the progress of any activity.
+
+## Slots
+
+- **progress-base**: The base slot of the progress, which is the main container.
+- **label-wrapper**: The label and value label wrapper.
+- **label**: The label of the progress.
+- **value**: The value label of the progress.
+- **track**: The track is the background bar of the progress.
+- **indicator**: The indicator is the bar that is filled according to the value.
+
+## Usage
+
+<CodePreview code={progressCodes.usage}/>
+
+## Disabled
+
+You can disable the progress bar to stop user interaction using the `data-disabled` attribute.
+
+<CodePreview code={progressCodes.disabled}/>
+
+## Sizes 
+
+<CodePreview code={progressCodes.sizes}/>
+
+## Colors 
+
+<CodePreview code={progressCodes.colors}/>
+
+## Indeterminate 
+
+You can use the `data-indeterminate` attribute to make it an indeterminate progress bar. This is useful when you don't know how long an operation will take or when displaying a loading animation.
+
+<CodePreview code={progressCodes.indeterminate}/>
+
+## Striped 
+
+You can make a progress bar appear with a striped pattern using the `data-striped` attribute as following: 
+
+<CodePreview code={progressCodes.striped}/>
+
+Or you can make a transparent striped progress bar:
+
+<CodePreview code={progressCodes.stripedTransparent}/>
+
+## With Label & Value
+
+<CodePreview code={progressCodes.labelAndValue}/>
+
+## Custom Styles
+
+You can customize the `Progress` component by passing custom Tailwind CSS classes to the component slots.
+
+<CodePreview code={progressCodes.customStyles}/>
+
+<CompsLinks
+  last={{ link: "../link", text: "Link" }}
+  next={{ link: "../Radio", text: "Radio" }}
+/>
+
+</Article>

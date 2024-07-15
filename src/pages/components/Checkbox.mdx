@@ -1,0 +1,55 @@
+import { checkboxCodes } from "@/data/component-codes/checkbox";
+
+<BCrumbs data={["Docs", "Components", "Checkbox"]} />
+
+<Article>
+
+# Checkbox
+
+Checkboxes are controls that allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
+
+## Slots
+
+- **checkbox-wrapper**: The checkbox wrapper.
+- **checkbox-icon**: The wrapper which wraps the svg icon
+	and checkbox input.
+- **svg**: The icon.
+- **checkbox**: The checkbox input.
+- **checkbox-label**: The text/label for the checkbox.
+
+## Usage
+
+<CodePreview code={checkboxCodes.default} />
+
+## Line through
+
+<CodePreview code={checkboxCodes.lineThrough} />
+
+## Disabled
+
+<CodePreview code={checkboxCodes.disabled} />
+
+## Sizes
+
+<CodePreview code={checkboxCodes.sizes} />
+
+## Colors
+
+<CodePreview code={checkboxCodes.colors} />
+
+## Radius
+
+<CodePreview code={checkboxCodes.radius} />
+
+## Custom Styles
+
+You can you various tailwind classes for customization as following:
+
+<CodePreview code={checkboxCodes.customized} />
+
+<CompsLinks
+  last={{ link: "../card", text: "Card" }}
+  next={{ link: "../checkbox-group", text: "Checkbox Group" }}
+/>
+
+</Article>

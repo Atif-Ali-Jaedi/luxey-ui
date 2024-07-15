@@ -38,7 +38,7 @@ export const Sidebar = ({ isActive, onClose, onSpecificLocations }) => {
 									{sidebarLinks
 										.slice(
 											index === 0 ? 0 : index === 1 ? 3 : index === 2 ? 6 : 11,
-											index === 0 ? 3 : index === 1 ? 6 : index === 2 ? 11 : 27
+											index === 0 ? 3 : index === 1 ? 6 : index === 2 ? 11 : 31
 										)
 										.map((link, i) => (
 											<li

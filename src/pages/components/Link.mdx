@@ -1,0 +1,45 @@
+import { linkCodes } from "@/data/component-codes/link";
+
+<BCrumbs data={["Docs", "Components", "Link"]} />
+<Article>
+
+# Link
+	
+Link component is styled to resemble a hyperlink for navigating between pages.
+	
+## Usage
+
+<CodePreview code={linkCodes.default } />
+
+## Disabled
+
+<CodePreview code={linkCodes.disabled } />
+
+## Sizes
+
+<CodePreview code={linkCodes.sizes } />
+
+## Colors
+
+<CodePreview code={linkCodes.colors } />
+
+## Underline
+
+<CodePreview code={linkCodes.underline } />
+
+## External
+
+If you set the `target` attribute or `data-show-anchor-icon="true"` attribute it will show an anchor icon.
+
+<CodePreview code={linkCodes.external } />
+
+## Block
+
+<CodePreview code={linkCodes.block} />
+
+<CompsLinks
+	last={{ link: "../kbd", text: "Kbd" }}
+	next={{ link: "../progress", text: "Progress" }}
+/>
+	
+</Article>

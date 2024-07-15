@@ -5,17 +5,21 @@ const Accordion = lazy(() => import("./components/Accordion.jsx"));
 const Badge = lazy(() => import("./components/Badge.jsx"));
 const Button = lazy(() => import("./components/Button.jsx"));
 const Card = lazy(() => import("./components/Card.jsx"));
-const Checkbox = lazy(() => import("./components/Checkbox.jsx"));
-const Chip = lazy(() => import("./components/Chip.jsx"));
-const Code = lazy(() => import("./components/Code.jsx"));
-const Divider = lazy(() => import("./components/Divider.jsx"));
+const Checkbox = lazy(() => import("./components/Checkbox.mdx"));
+const CheckboxGroup = lazy(() => import("./components/CheckboxGroup.mdx"));
+const Chip = lazy(() => import("./components/Chip.mdx"));
+const Code = lazy(() => import("./components/Code.mdx"));
+const Divider = lazy(() => import("./components/Divider.mdx"));
 const Input = lazy(() => import("./components/Input.mdx"));
-const Link = lazy(() => import("./components/Link.jsx"));
-const Radio = lazy(() => import("./components/Radio.jsx"));
-const Skeleton = lazy(() => import("./components/Skeleton.jsx"));
-const Switch = lazy(() => import("./components/Switch.jsx"));
+const Kbd = lazy(() => import("./components/Kbd.mdx"));
+const Link = lazy(() => import("./components/Link.mdx"));
+const Progress = lazy(() => import("./components/Progress.mdx"));
+const Radio = lazy(() => import("./components/Radio.mdx"));
+const Skeleton = lazy(() => import("./components/Skeleton.mdx"));
+const ScrollShadow = lazy(() => import("./components/ScrollShadow.mdx"));
+const Switch = lazy(() => import("./components/Switch.mdx"));
 const Textarea = lazy(() => import("./components/Textarea.jsx"));
-const User = lazy(() => import("./components/User.jsx"));
+const User = lazy(() => import("./components/User.mdx"));
 
 const Introduction = lazy(() => import("./mains/docs/Introduction.mdx"));
 const Installation = lazy(() => import("./mains/docs/Installation.mdx"));
@@ -48,14 +52,18 @@ const components = [
 	{ path: "badge", element: Badge },
 	{ path: "button", element: Button },
 	{ path: "checkbox", element: Checkbox },
+	{ path: "checkbox-group", element: CheckboxGroup },
 	{ path: "chip", element: Chip },
 	{ path: "code", element: Code },
 	{ path: "divider", element: Divider },
+	{ path: "input", element: Input },
+	{ path: "kbd", element: Kbd },
 	{ path: "link", element: Link },
 	{ path: "radio", element: Radio },
 	{ path: "switch", element: Switch },
 	{ path: "textarea", element: Textarea },
-	{ path: "input", element: Input }
+	{ path: "scroll-shadow", element: ScrollShadow },
+	{ path: "progress", element: Progress }
 ];
 
 export { components, docs, Blogs };
