@@ -99,7 +99,7 @@ const CodePreview = ({ code, iframeHeight }) => {
 			<div className="relative not-prose">
 				{previewToggle && (
 					<div className="border rounded-lg border-gray-300 dark:border-gray-600">
-						<div className="relative p-8 overflow-x-scroll">
+						<div className="relative px-4 py-6 overflow-x-scroll">
 							<iframe
 								ref={iframeRef}
 								className="w-full frame"

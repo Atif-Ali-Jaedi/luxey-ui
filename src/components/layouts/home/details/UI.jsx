@@ -96,7 +96,7 @@ export const UI = () => {
 			<motion.img
 				animate={{ y: [8, 2, 8] }}
 				transition={{ ...transition, repeatDelay: 0.5 }}
-				src="https://avatars.githubusercontent.com/u/129975940?v=4"
+				src="/Atif_Ali_Jaedi.jpg"
 				alt="Atif Ali Jaedi"
 				className="size-12 absolute left-4 top-24 !my-0 rounded-full object-cover"
 			/>

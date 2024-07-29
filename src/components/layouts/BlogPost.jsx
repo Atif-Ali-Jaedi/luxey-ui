@@ -41,7 +41,7 @@ export const BlogPost = () => {
 						src={
 							blog.avatar
 								? blog.avatar
-								: "https://avatars.githubusercontent.com/u/129975940?v=4"
+								: "/Atif_Ali_Jaedi.jpg"
 						}
 						alt={
 							blog.author

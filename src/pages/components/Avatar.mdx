@@ -1,0 +1,69 @@
+import { avatarCodes } from "@/data/component-codes/avatar";
+
+<BCrumbs data={["Docs", "Components", "Avatar"]} />
+
+<Article>
+
+# Avatar
+
+The Avatar is used to represent a user's profile picture, initial or fallback icon.
+
+## Usage
+
+<CodePreview code={avatarCodes.default} />
+
+## Sizes
+
+<CodePreview code={avatarCodes.sizes} />
+
+## Disabled
+
+<CodePreview code={avatarCodes.disabled} />
+
+## Outlined with Colors
+
+<CodePreview code={avatarCodes.outlinedWithColors} />
+
+## Radius
+
+<CodePreview code={avatarCodes.radius} />
+
+## Avatar Fallbacks
+
+If the `src` is not passed or it's empty there are 3 fallbacks.
+
+- If there is the `alt` attribute, it will be used.
+- If there is nothing, a default fallback icon is used.
+- To customize the fallback, you can you svgs, images or text inside the `data-fallback` attribute.
+
+<CodePreview code={avatarCodes.fallbacks} />
+
+## Avatar group
+
+<CodePreview code={avatarCodes.group} />
+
+## Group disabled
+
+<CodePreview code={avatarCodes.groupDisabled} />
+
+## Group max count
+
+You can limit the number of avatars displayed by passing the `data-max` attribute and set the value as your desire.
+
+<CodePreview code={avatarCodes.groupMaxCount} />
+
+## Group total count
+
+You can display the total number of avatars by passing the `data-total` attribute and set the value as your desire.
+
+<CodePreview code={avatarCodes.groupTotalCount} />
+
+## Group custom count
+
+You can also customize the count displayed when the `data-total` attribute is passed using the `data-total-count-child` and the `data-total-count-classnames` attributes.
+
+<CodePreview code={avatarCodes.groupCustomCount} />
+
+<CompsLinks next={{ link: "../accordion", text: "Accordion" }} />
+
+</Article>

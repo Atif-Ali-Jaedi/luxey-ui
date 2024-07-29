@@ -1,0 +1,58 @@
+import { textareaCodes } from "@/data/component-codes/textarea";
+
+<BCrumbs data={["Docs", "Components", "Textarea"]} />
+
+<Article>
+
+# Textarea
+
+A multi-line input for writing text.
+
+## Slots
+
+- **textarea-outerbox**: The outer box of the component.
+- **label**: The label to use outline the inner box.
+- **textarea-innerbox**: The innerbox for holding label and the text area.
+- **label**: The label for the textarea.
+- **textarea**: The text area.
+
+## Usage
+
+<CodePreview code={textareaCodes.default} />
+
+## Disabled
+
+<CodePreview code={textareaCodes.disabled} />
+
+## Read Only
+
+<CodePreview code={textareaCodes.readOnly} />
+
+## Autosize
+
+Textarea grows automatically based on the content, but you can set a min and max height to it using the `data-min-row` and `data-max-row` attributes. 
+
+<CodePreview code={textareaCodes.autoSize} />
+
+## Without autosize
+
+In case you want to disable the autosize feature, set the `data-autosize` attribute to `false`.
+
+<CodePreview code={textareaCodes.withoutAutosize} />
+
+## Variants
+
+<CodePreview code={textareaCodes.variants} />
+
+## Invalid
+
+Use the `data-invalid` attribute to display an invalid textarea.
+
+<CodePreview code={textareaCodes.invalid} />
+
+<CompsLinks
+  last={{ link: "../switch", text: "Switch" }}
+  next={{ link: "../user", text: "User" }}
+/>
+
+</Article>

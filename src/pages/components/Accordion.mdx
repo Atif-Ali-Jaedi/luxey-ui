@@ -1,0 +1,47 @@
+import { accordionCodes } from "@/data/component-codes/accordion";
+
+<BCrumbs data={["Docs", "Components", "Accordion"]} />
+<Article>
+
+# Accordion
+
+Accordion is a type of menu that displays a list of headers stacked on top of one another. When clicked on, these headers will either reveal or hide associated content.
+
+## Slots
+
+- **accordions**: The list of accordions or the wrapper.
+- **accordion**: The actual accordion which has the header
+and the body.
+- **accordion-header**: The header of the accordion.
+- **accordion-body**: The body of the accordion.
+
+> **Note**: The accordion itself hasn't set to work if it has accordions inside it yet.
+
+## Usage
+
+<CodePreview code={accordionCodes.default} />
+
+> **Note**: You have to use that long class `[&:has(...)>...>i]:className` to be able to animate the anchor icon as your desire.
+
+## Expand single items
+
+If you set the `data-selection-mode` to `single`, then only one accordion can be opened at once.
+
+<CodePreview code={accordionCodes.expandSingleItems} />
+
+## Disabled
+
+<CodePreview code={accordionCodes.disabledAccordion} />
+
+## Custom Styles
+
+You can customize the `Accordion` component by passing custom TailwindCSS classes to the component slots.
+
+<CodePreview code={accordionCodes.customized} />
+
+<CompsLinks
+  last={{ link: "../avatar", text: "Avatar" }}
+  next={{ link: "../badge", text: "Badge" }}
+/>
+
+</Article>

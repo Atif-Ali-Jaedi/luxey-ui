@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Icodethis } from "@/assets";
 
-const currentVersion = "0.4.1";
+const currentVersion = "0.4.2";
 
 const navLinks = [
 	{ id: 1, name: "Documentation", link: "/docs" },
@@ -24,7 +24,7 @@ const components = [
 	{ name: "Avatar", link: "/docs/components/avatar" },
 	{ name: "Accordion", link: "/docs/components/accordion" },
 	{ name: "Badge", link: "/docs/components/badge" },
-	{ name: "Button", link: "/docs/components/button" },
+	{ name: "Button", link: "/docs/components/button", chip: "Updated" },
 	{ name: "Card", link: "/docs/components/card" },
 	{ name: "Checkbox", link: "/docs/components/checkbox" },
 	{

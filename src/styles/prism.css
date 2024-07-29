@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Fira Code;
+	src: url(../assets/fonts/Fira-Code.ttf);
+}
+
 :root {
 	--background: #282a36;
 	--comment: #6272a4;
@@ -52,9 +57,10 @@ code[class*="language-"] ::selection {
 }
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-[--foreground] bg-[0] font-mono text-start whitespace-pre !rounded-xl leading-[1.5em] [word-spacing:normal] [word-break:normal] [word-wrap:normal]	[tab-size:2] [hyphens:none] outline-none;
+	@apply text-[--foreground] bg-[0] text-start whitespace-pre rounded-xl leading-[1.5em] [word-spacing:normal] [word-break:normal] [word-wrap:normal]	[tab-size:2] [hyphens:none] outline-none;
 	& * {
-		@apply text-sm font-mono;
+		@apply text-sm;
+		font-family: "Fira Code";
 	}
 }
 

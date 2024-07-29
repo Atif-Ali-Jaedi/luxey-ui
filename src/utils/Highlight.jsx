@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Prism from "prismjs";
-import { Button } from "@/components";
+import { Button, Tooltip } from "@/components";
 import { Copy } from "lucide-react";
 
 import "prismjs/plugins/line-numbers/prism-line-numbers";
@@ -82,13 +82,20 @@ const Highlight = ({
 					</code>
 				</pre>
 				{!disableCopyBtn && (
-					<Button
-						onClick={() => navigator.clipboard.writeText(code)}
-						variant="light"
-						className="absolute right-2 top-2 text-white p-0 w-8 h-8 grid place-items-center hover:bg-gray-700 rounded-md transition duration-300"
+					<Tooltip
+						tooltip="Copy"
+						hasArrow
+						clickMessage="Copied"
+						parentClassName="absolute top-2 right-2"
 					>
-						<Copy size={16} />
-					</Button>
+						<Button
+							onClick={() => navigator.clipboard.writeText(code)}
+							variant="light"
+							className="text-white active:scale-100 p-0 w-8 h-8 grid place-items-center hover:bg-gray-700 rounded-md transition duration-300"
+						>
+							<Copy size={16} />
+						</Button>
+					</Tooltip>
 				)}
 			</div>
 		</div>

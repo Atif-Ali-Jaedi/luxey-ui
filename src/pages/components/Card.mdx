@@ -1,0 +1,45 @@
+import { cardCodes } from "@/data/component-codes/card";
+
+<BCrumbs data={["Docs", "Components", "Card"]} />
+
+<Article>
+
+# Card 
+
+Card is a container for text, photos and actions in the context of a single subject.
+
+## Slots
+
+- **card**: The main component to display a card.
+- **card-header**: Commonly used for the title of a card.
+- **card-body**: The main content of a card. 
+- **card-footer**: Commonly used for actions.
+
+## Usage 
+
+<CodePreview code={cardCodes.usage} />
+
+## With Divider 
+
+<CodePreview code={cardCodes.withDivider} />
+
+> See the [Divider](/docs/components/divider) component for more details.
+
+## Composition
+
+You can use other LuxeyUI Components to make a more complex card.
+
+<CodePreview code={cardCodes.composition} />
+
+## Primary Action 
+
+If you pass the `data-pressable` attribute and set it to `true`, the `ripple` effect will be displayed like a button.
+
+<CodePreview code={cardCodes.primaryAction} />
+
+<CompsLinks
+  last={{ link: "../button", text: "Button" }}
+  next={{ link: "../checkbox", text: "Checkbox" }}
+/>
+
+</Article>

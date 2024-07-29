@@ -1,10 +1,10 @@
 import { lazy } from "react";
 
-const Avatar = lazy(() => import("./components/Avatar.jsx"));
-const Accordion = lazy(() => import("./components/Accordion.jsx"));
-const Badge = lazy(() => import("./components/Badge.jsx"));
-const Button = lazy(() => import("./components/Button.jsx"));
-const Card = lazy(() => import("./components/Card.jsx"));
+const Avatar = lazy(() => import("./components/Avatar.mdx"));
+const Accordion = lazy(() => import("./components/Accordion.mdx"));
+const Badge = lazy(() => import("./components/Badge.mdx"));
+const Button = lazy(() => import("./components/Button.mdx"));
+const Card = lazy(() => import("./components/Card.mdx"));
 const Checkbox = lazy(() => import("./components/Checkbox.mdx"));
 const CheckboxGroup = lazy(() => import("./components/CheckboxGroup.mdx"));
 const Chip = lazy(() => import("./components/Chip.mdx"));
@@ -18,7 +18,7 @@ const Radio = lazy(() => import("./components/Radio.mdx"));
 const Skeleton = lazy(() => import("./components/Skeleton.mdx"));
 const ScrollShadow = lazy(() => import("./components/ScrollShadow.mdx"));
 const Switch = lazy(() => import("./components/Switch.mdx"));
-const Textarea = lazy(() => import("./components/Textarea.jsx"));
+const Textarea = lazy(() => import("./components/Textarea.mdx"));
 const User = lazy(() => import("./components/User.mdx"));
 
 const Introduction = lazy(() => import("./mains/docs/Introduction.mdx"));

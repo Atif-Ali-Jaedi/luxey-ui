@@ -13,7 +13,8 @@ import { Footer } from "./layouts/home/footer/Footer";
 import { Button } from "./ui/Button";
 import { Blog } from "./ui/Blog";
 import { SearchModal } from "./ui/SearchModal";
-import { Steps, Step, HighlightedCode} from "./ui/Steps";
+import { Tooltip } from "./ui/Tooltip";
+import { Steps, Step, HighlightedCode } from "./ui/Steps";
 
 export {
 	Hero,
@@ -30,5 +31,6 @@ export {
 	Steps,
 	Step,
 	HighlightedCode,
-	SearchModal
+	SearchModal,
+	Tooltip
 };

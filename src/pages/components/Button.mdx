@@ -1,0 +1,68 @@
+import { buttonCodes } from "@/data/component-codes/button";
+
+<BCrumbs data={["Docs", "Components", "Button"]} />
+
+<Article>
+
+# Button
+
+Button allows users to perform actions and choose with a single tap or more.
+
+## Usage
+
+<CodePreview code={buttonCodes.default} />
+
+> **Note**: You can disable the default `:active` effect using the `data-disable-animation` attribute.
+
+## Disabled
+
+<CodePreview code={buttonCodes.disabled} />
+
+> **Note**: You can also disable the ripple effect by setting the `data-disable-ripple` attribute to `true`. 
+
+## Sizes
+
+<CodePreview code={buttonCodes.sizes} />
+
+> **Note**: You can make the button full width using the `data-fullWidth` attribute.
+
+## Radius
+
+<CodePreview code={buttonCodes.radius} />
+
+## Colors
+
+<CodePreview code={buttonCodes.colors} />
+
+## Variants
+
+<CodePreview code={buttonCodes.variants} />
+
+## With Icons
+
+Just add your icons before or after the content as following:
+
+<CodePreview code={buttonCodes.withIcons} />
+
+## Icon only
+
+You can also display a button without text by passing the `data-icon-only` attribute and the desired icon as `children`.
+
+<CodePreview code={buttonCodes.iconOnly} />
+
+## Custom Styles
+
+You can customize the `Button` component by passing custom TailwindCSS classes to the component slots.
+
+<CodePreview code={buttonCodes.customStyles} />
+
+## Button Group
+
+<CodePreview code={buttonCodes.buttonGroup} />
+
+<CompsLinks
+  last={{ link: "../badge", text: "Badge" }}
+  next={{ link: "../card", text: "Card" }}
+/>
+
+</Article>

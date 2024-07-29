@@ -13,12 +13,24 @@ import { Helmet } from "react-helmet-async";
 
 All the notable changes are listed here, ranging from super small updates to huge ones.
 
-<Chip>v0.4.0</Chip>
+<Chip>v0.4.2</Chip>
+<Time>July 26, 2024</Time>
+
+## Updated the Progress and Button component
+
+- **Button**:
+    - Fixed the sizes.
+    - Fixed an issue where the `radius-` classes does not work when `size-` classes are applied. 
+    - The ripple effect can be disabled using the `data-disable-ripple` attribute with the value `true`.
+    - The default animation can be disabled using the `data-disable-animation` attribute.
+- **Progress**: Changed the stripped gradient opacity when using transparent background, from `rgba(0 0 0 / 0.1)` to `rgba(0 0 0 / 0.175)`.
+
+<Chip>v0.4.0 & v0.4.1</Chip>
 <Time>July 14, 2024</Time>
 
-## Added 4 new components with a minor bug fix
+## Added 4 new components with a bug fixes
 
-Here's what I've done:
+This was a small update. For more details, please visit [Introducing LuxeyUI v0.4.0](/blog/Introducing%20v0.4.0).
 
 ### New Components
 
@@ -30,6 +42,8 @@ Here's what I've done:
 ### Bug Fixes
 
 - **Radio Group**: Improved readability by adjusting `radio-group-label` color from `text-foreground/70` to `text-default-700`.
+- **Progress**: Solved an specificity issue caused by the css `:not()` selector, <code className="code !whitespace-pre-wrap !inline">&:not(&[data-indeterminate]) > .track</code> to `& > .track`.
+
 
 <Chip>v0.3.3</Chip>
 <Time>July 10, 2024</Time>
@@ -73,21 +87,20 @@ This was a huge update. I've added so many things and redesigned the entire webs
 
 ## Improved collections & fixed components & website
 
-Big update. Although added only 5 components, and fixed 2 components, added an entire website for showcase.
+It was a huge update. Although I've added only 5 components, and fixed 2 components, I've also created this website for showcase.
 
 ### Added
 
-- LuxeyUI official Website
-- Accordion
-- Card
-- Checkbox
-- Skeleton
-- Textarea
+- **Accordion**: A type of menu that displays a list of headers stacked on top of one another. When clicked on, these headers will either reveal or hide associated content.
+- **Card**: A container for text, photos and actions in the context of a single subject.
+- **Checkbox**: Checkboxes are controls that allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
+- **Skeleton**: Skeleton is a placeholder to show a loading state and the expected shape of a component.
+- **Textarea**: A multi-line input for writing text.
 
 ### Fixed
 
-- Avatar
-- Chip
+- **Avatar**: Fixed some issues.
+- **Chip**: Fixed the sizing issue due to the wrong calculation of the width of the chip.
 
 <Chip>v0.1.0</Chip>
 <Time>January 5, 2024</Time>
@@ -95,15 +108,15 @@ Big update. Although added only 5 components, and fixed 2 components, added an e
 ## Improved collections & more
 This was a medium update, neither too big nor too small. There was some issues with some components but will be fixed later. Here's what I've added:
 
-- Badge
-- Button
-- Chips
-- Code
-- Divider
-- Link
-- Radio
-- Switch
-- User
+- **Badge**: Badge is used as a status descriptor for especially avatars or icons.
+- **Button**: Button allows users to perform actions and choose with a single tap or more.
+- **Chip**: A small block to display important informations.
+- **Code**: A component which is used for displaying an inline code.
+- **Divider**: A separator for contents.
+- **Link**: Link component is styled to resemble a hyperlink for navigating between pages.
+- **Radio**: Radio buttons—where only one of the buttons can be checked or selected.
+- **Switch**: Switch is used to toggle between checked and not checked.
+- **User**: Display user information with avatar and name and description.
 
 <Chip>v0.0.1</Chip>
 <Time>December 29, 2023</Time>
@@ -112,9 +125,9 @@ This was a medium update, neither too big nor too small. There was some issues w
 
 There wasn't much, It was just a simple test. I had added: 
 
-- Theme 
-- Avatar
+- **Theme**: A theme is web design manages the front-end design, establishing the overall appearance and functionality by managing its front-end design. Themes determine all design components: page layouts, backgrounds, color palettes, headers and footers, positioning, sizing, and typography.
+- **Avatar**: The Avatar is used to represent a user's profile picture, initial or fallback icon.
 
-<wbr/>
+<CompsLinks last={{ link: "../custom-variants", text: "Custom Variants" }} />
 
 </Article>

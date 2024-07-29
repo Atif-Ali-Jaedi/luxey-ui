@@ -40,7 +40,7 @@ export const Blog = ({
 								src={
 									avatar
 										? avatar
-										: "https://avatars.githubusercontent.com/u/129975940?v=4"
+										: "/Atif_Ali_Jaedi.jpg"
 								}
 								className="size-8 !my-0 object-cover rounded-full"
 							/>
