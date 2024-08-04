@@ -8,8 +8,12 @@ const Card = lazy(() => import("./components/Card.mdx"));
 const Checkbox = lazy(() => import("./components/Checkbox.mdx"));
 const CheckboxGroup = lazy(() => import("./components/CheckboxGroup.mdx"));
 const Chip = lazy(() => import("./components/Chip.mdx"));
+const CircularProgress = lazy(() =>
+	import("./components/CircularProgress.mdx")
+);
 const Code = lazy(() => import("./components/Code.mdx"));
 const Divider = lazy(() => import("./components/Divider.mdx"));
+const Image = lazy(() => import("./components/Image.mdx"));
 const Input = lazy(() => import("./components/Input.mdx"));
 const Kbd = lazy(() => import("./components/Kbd.mdx"));
 const Link = lazy(() => import("./components/Link.mdx"));
@@ -17,6 +21,7 @@ const Progress = lazy(() => import("./components/Progress.mdx"));
 const Radio = lazy(() => import("./components/Radio.mdx"));
 const Skeleton = lazy(() => import("./components/Skeleton.mdx"));
 const ScrollShadow = lazy(() => import("./components/ScrollShadow.mdx"));
+const Spinner = lazy(() => import("./components/Spinner.mdx"));
 const Switch = lazy(() => import("./components/Switch.mdx"));
 const Textarea = lazy(() => import("./components/Textarea.mdx"));
 const User = lazy(() => import("./components/User.mdx"));
@@ -63,7 +68,10 @@ const components = [
 	{ path: "switch", element: Switch },
 	{ path: "textarea", element: Textarea },
 	{ path: "scroll-shadow", element: ScrollShadow },
-	{ path: "progress", element: Progress }
+	{ path: "progress", element: Progress },
+	{ path: "spinner", element: Spinner },
+	{ path: "image", element: Image },
+	{ path: "circular-progress", element: CircularProgress }
 ];
 
 export { components, docs, Blogs };

@@ -1,7 +1,4 @@
-@font-face {
-	font-family: Fira Code;
-	src: url(../assets/fonts/Fira-Code.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root {
 	--background: #282a36;
@@ -60,7 +57,7 @@ pre[class*="language-"] {
 	@apply text-[--foreground] bg-[0] text-start whitespace-pre rounded-xl leading-[1.5em] [word-spacing:normal] [word-break:normal] [word-wrap:normal]	[tab-size:2] [hyphens:none] outline-none;
 	& * {
 		@apply text-sm;
-		font-family: "Fira Code";
+		font-family: "Fira Code", monospace;
 	}
 }
 

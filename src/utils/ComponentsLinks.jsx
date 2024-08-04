@@ -16,7 +16,7 @@ export const ComponentsLinks = ({ last, next }) => (
 							variant="light"
 							radius="lg"
 							size="sm"
-							className="max-h-11 gap-2 w-max"
+							className="max-h-11 gap-2"
 						>
 							{index === 0 ? <Chevron position="left" isGradient /> : null}
 							{item.text}

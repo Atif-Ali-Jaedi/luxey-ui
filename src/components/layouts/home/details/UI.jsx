@@ -13,7 +13,9 @@ export const UI = () => {
 				transition={{ ...transition, repeatDelay: 0.125 }}
 				className="p-5 border shadow-md shadow-gray-100 dark:shadow-none border-gray-200 rounded-2xl w-48 dark:border-gray-700 backdrop-blur-xl bg-gray-100/40 dark:bg-gray-600/30 absolute top-16"
 			>
-				<h5 className="dark:text-gray-400 mb-3 tracking-widest">POPULARITY</h5>
+				<h5 className="dark:text-gray-400 mb-3 tracking-widest">
+					POPULARITY
+				</h5>
 				<TrendingUp className="text-success mb-2" />
 				<strong className="text-3xl font-semibold">80%+</strong>
 			</motion.div>
@@ -84,7 +86,7 @@ export const UI = () => {
 				className="absolute shadow-md shadow-gray-100 dark:shadow-none left-8 top-0 flex items-center border border-gray-200 rounded-2xl dark:border-gray-700 backdrop-blur-xl bg-gray-100/40 dark:bg-gray-600/30 w-max py-2.5 px-4"
 			>
 				<input
-					className="bg-transparent outline-none placeholder:text-black dark:placeholder:text-white placeholder:font-medium w-64 font-medium"
+					className="bg-transparent outline-none placeholder:text-black dark:placeholder:text-white placeholder:font-medium w-56 font-medium"
 					id="tdm"
 					placeholder="Search libraries"
 				/>

@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Icodethis } from "@/assets";
 
-const currentVersion = "0.4.2";
+const currentVersion = "0.5.1";
 
 const navLinks = [
 	{ id: 1, name: "Documentation", link: "/docs" },
@@ -24,28 +24,33 @@ const components = [
 	{ name: "Avatar", link: "/docs/components/avatar" },
 	{ name: "Accordion", link: "/docs/components/accordion" },
 	{ name: "Badge", link: "/docs/components/badge" },
-	{ name: "Button", link: "/docs/components/button", chip: "Updated" },
+	{ name: "Button", link: "/docs/components/button" },
 	{ name: "Card", link: "/docs/components/card" },
 	{ name: "Checkbox", link: "/docs/components/checkbox" },
 	{
 		name: "Checkbox Group",
-		link: "/docs/components/checkbox-group",
-		chip: "New"
+		link: "/docs/components/checkbox-group"
 	},
 	{ name: "Chip", link: "/docs/components/chip" },
-	{ name: "Code", link: "/docs/components/code" },
-	{ name: "Divider", link: "/docs/components/divider" },
-	{ name: "Input", link: "/docs/components/input", chip: "Updated" },
-	{ name: "Kbd", link: "/docs/components/kbd", chip: "New" },
-	{ name: "Link", link: "/docs/components/link" },
-	{ name: "Progress", link: "/docs/components/progress", chip: "New" },
-	{ name: "Radio", link: "/docs/components/radio", chip: "Updated" },
-	{ name: "Skeleton", link: "/docs/components/skeleton" },
 	{
-		name: "Scroll Shadow",
-		link: "/docs/components/scroll-shadow",
+		name: "Circular Progress",
+		link: "/docs/components/circular-progress",
 		chip: "New"
 	},
+	{ name: "Code", link: "/docs/components/code" },
+	{ name: "Divider", link: "/docs/components/divider" },
+	{ name: "Image", link: "/docs/components/image", chip: "New" },
+	{ name: "Input", link: "/docs/components/input" },
+	{ name: "Kbd", link: "/docs/components/kbd" },
+	{ name: "Link", link: "/docs/components/link" },
+	{ name: "Progress", link: "/docs/components/progress" },
+	{ name: "Radio", link: "/docs/components/radio" },
+	{ name: "Skeleton", link: "/docs/components/skeleton", chip: "Updated" },
+	{
+		name: "Scroll Shadow",
+		link: "/docs/components/scroll-shadow"
+	},
+	{ name: "Spinner", link: "/docs/components/spinner", chip: "New" },
 	{ name: "Switch", link: "/docs/components/switch" },
 	{ name: "Textarea", link: "/docs/components/textarea" },
 	{ name: "User", link: "/docs/components/user" }
@@ -73,27 +78,23 @@ const faqs = [
 	{
 		id: 1,
 		question: "Can I use LuxeyUI with other CSS frameworks?",
-		answer:
-			"Yes, LuxeyUI is designed to seamlessly integrate with other CSS frameworks. It plays well with popular frameworks like Bootstrap or Foundation, allowing you to leverage the best of both worlds for your projects."
+		answer: "Yes, LuxeyUI is designed to seamlessly integrate with other CSS frameworks. It plays well with popular frameworks like Bootstrap or Foundation, allowing you to leverage the best of both worlds for your projects."
 	},
 	{
 		id: 2,
 		question: "Is LuxeyUI suitable for responsive web design?",
-		answer:
-			"Absolutely! LuxeyUI is built with responsiveness in mind. All components are designed to adapt gracefully to various screen sizes, ensuring a consistent and visually appealing experience across devices."
+		answer: "Absolutely! LuxeyUI is built with responsiveness in mind. All components are designed to adapt gracefully to various screen sizes, ensuring a consistent and visually appealing experience across devices."
 	},
 	{
 		id: 3,
 		question: "Does LuxeyUI include dark mode support?",
-		answer:
-			"Yes it does. LuxeyUI provides out-of-the-box support for dark mode. Then Easily toggle between light and dark themes to enhance user experience and cater to diverse design preferences."
+		answer: "Yes it does. LuxeyUI provides out-of-the-box support for dark mode. Then Easily toggle between light and dark themes to enhance user experience and cater to diverse design preferences."
 	},
 	{
 		id: 4,
 		question:
 			"How frequently is LuxeyUI updated, and is there ongoing support?",
-		answer:
-			"LuxeyUI is actively maintained, with frequently updates to introduce new features, improvements, and ensure compatibility with the latest web technologies. We're ready to assist you with any inquiries or issues you may encounter during your development journey."
+		answer: "LuxeyUI is actively maintained, with frequently updates to introduce new features, improvements, and ensure compatibility with the latest web technologies. We're ready to assist you with any inquiries or issues you may encounter during your development journey."
 	}
 ];
 
