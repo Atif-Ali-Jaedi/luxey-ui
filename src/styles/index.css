@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 @layer base {
-	:not(pre)::-webkit-scrollbar {
-		@apply w-2 min-h-2;
+	::-webkit-scrollbar {
+		@apply w-2 h-2;
 	}
-	:not(pre)::-webkit-scrollbar-thumb {
+	::-webkit-scrollbar-thumb {
 		@apply rounded-lg bg-zinc-300;
 	}
 	html {

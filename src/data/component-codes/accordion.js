@@ -1,101 +1,394 @@
-const defaultText = `Lorem ipsum dolor sit amet, cons max-w-smectetur adipisicing elit. Eveniet voluptatibus esse quia, fugiat maiores iusto dolores rem, dicta!`;
+const svg = `<svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em"><path d="M15.5 19l-7-7 7-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>`
+const content = `lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incident ullamcorper. Ut enim ad minim veniam.`
 
 export const accordionCodes = {
-	default: `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin />
-<div class="accordions max-w-sm dark:text-white [&>.accordion:has(.accordion-body.active)>.accordion-header>i]:-rotate-90 [&_.icon]:transition-all [&_.icon]:duration-200">
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  usage: `<div class="accordion">
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-</div>
-<br/>`,
-	expandSingleItems: `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin />
-<div data-selection-mode="single" class="accordions max-w-sm dark:text-white [&>.accordion:has(.accordion-body.active)>.accordion-header>i]:-rotate-90 [&_.icon]:transition-all [&_.icon]:duration-200">
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+</div>`,
+  withSubtitle: `<div class="accordion">
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+                <span class="subtitle">Subtitle</span>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+                <span class="subtitle">Subtitle</span>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+                <span class="subtitle">Subtitle</span>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-</div>
-<br/>`,
-	disabledAccordion: `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin />
-<div class="accordions max-w-sm dark:text-white [&>.accordion:has(.accordion-body.active)>.accordion-header>i]:-rotate-90 [&_.icon]:transition-all [&_.icon]:duration-200">
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+</div>`,
+expandSingleItems: `<div class="accordion" data-selection-mode="single">
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion" data-disabled>
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">Accordion <i class="icon fas fa-chevron-left fa-xs"></i></div>
-    <div class="accordion-body">
-      ${defaultText}
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-</div>
-<br/>`,
-	customized: `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin />
-<div class="accordions max-w-sm dark:text-white [&_.accordion-body]:!ease-out [&>.accordion:has(.accordion-body.active)>.accordion-header>i]:-rotate-90 [&_.icon]:transition-all [&_.icon]:duration-200">
-  <div class="accordion">
-    <div class="accordion-header">
-      <strong class="text-lg font-medium">How well it works?</strong> 
-      <i class="icon fas fa-chevron-left fa-xs"></i>
+</div>`,
+compact: `<div class="accordion" data-compact>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
-    <div class="accordion-body">
-      <p class="pb-1">${defaultText}</p>
-    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">
-      <strong class="text-lg font-medium">Can I customize?</strong> 
-      <i class="icon fas fa-chevron-left fa-xs"></i>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
-    <div class="accordion-body">
-      <p class="pb-1">${defaultText}</p>
-    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-  <div class="accordion">
-    <div class="accordion-header">
-      <strong class="text-lg font-medium">Can it be animated?</strong> 
-      <i class="icon fas fa-chevron-left fa-xs"></i>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
     </div>
-    <div class="accordion-body">
-      <p class="pb-1">${defaultText}</p>
-    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
   </div>
-</div>
-<br/>`
-};
+</div>`,
+defaultExpandedItems: `<div class="accordion">
+  <div class="accordion-item" data-open="true">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+</div>`,
+disabled: `<div class="accordion">
+  <div class="accordion-item" data-disabled>
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+</div>`,
+startContent: `<div class="accordion">
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="start-content">
+              <div class="avatar radius-lg outlined primary">
+                <img src="https://i.pravatar.cc/150" alt="Name" />
+              </div>
+            </div>
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="start-content">
+              <div class="avatar radius-lg outlined success">
+                <img src="https://i.pravatar.cc/150?eu=hsga" alt="Name" />
+              </div>
+            </div>
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+  <div class="accordion-item">
+    <div class="heading">
+        <button class="trigger">
+            <div class="start-content">
+              <div class="avatar radius-lg outlined warning">
+                <img src="https://i.pravatar.cc/150?eu=ahsta" alt="Name" />
+              </div>
+            </div>
+            <div class="title-wrapper">
+                <h3 class="title">Title</h3>
+            </div>
+            <span class="indicator">
+                ${svg}
+            </span>
+        </button>
+    </div>
+    <section>
+        <div class="content dark:text-white">
+            ${content}
+        </div>
+    </section>
+  </div>
+</div>`,
+}

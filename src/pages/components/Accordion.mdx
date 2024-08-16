@@ -1,6 +1,7 @@
 import { accordionCodes } from "@/data/component-codes/accordion";
 
 <BCrumbs data={["Docs", "Components", "Accordion"]} />
+
 <Article>
 
 # Accordion
@@ -9,35 +10,55 @@ Accordion is a type of menu that displays a list of headers stacked on top of on
 
 ## Slots
 
-- **accordions**: The list of accordions or the wrapper.
-- **accordion**: The actual accordion which has the header
-and the body.
-- **accordion-header**: The header of the accordion.
-- **accordion-body**: The body of the accordion.
+- **accordion**: The container of the `accordion-item`.
+- **accordion-item**: The accordion item wrapper. 
+- **heading**: The accordion item heading. It contains the indicator and the title.
+- **trigger**: The button that open/close the accordion item.
+- **title-wrapper**: The wrapper of the title and subtitle.
+- **title**: The accordion item title.
+- **subtitle**: The accordion item subtitle.
+- **start-content**: The content before the accordion item.
+- **indicator**: The element that indicates the open/close state of the accordion item.
+- **content**: The accordion item content.
 
-> **Note**: The accordion itself hasn't set to work if it has accordions inside it yet.
+> **Note**: The accordion itself hasn't been made to work if it has nested accordion(s) yet.
 
-## Usage
+## Usage 
 
-<CodePreview code={accordionCodes.default} />
+<CodePreview code={accordionCodes.usage}/>
 
-> **Note**: You have to use that long class `[&:has(...)>...>i]:className` to be able to animate the anchor icon as your desire.
+## With Subtitle 
 
-## Expand single items
+<CodePreview code={accordionCodes.withSubtitle}/>
 
-If you set the `data-selection-mode` to `single`, then only one accordion can be opened at once.
+## Expand Single Items
 
-<CodePreview code={accordionCodes.expandSingleItems} />
+If you set the `data-selection-mode` to `single`, then the `Accordion` will allow single item to be expanded at once.
 
-## Disabled
+<CodePreview code={accordionCodes.expandSingleItems}/>
 
-<CodePreview code={accordionCodes.disabledAccordion} />
+## Compact
 
-## Custom Styles
+If you set the `data-compact` attribute, the `Accordion` will be displayed in a compact style.
 
-You can customize the `Accordion` component by passing custom TailwindCSS classes to the component slots.
+<CodePreview code={accordionCodes.compact}/>
 
-<CodePreview code={accordionCodes.customized} />
+## Default expanded items
+
+If you set the `data-open` attribute to `true`, those items will be expanded by default.
+
+<CodePreview code={accordionCodes.defaultExpandedItems}/>
+
+## Disabled Items
+
+If you set the `data-disabled` attribute, the `accordion-item` will be disabled.
+
+<CodePreview code={accordionCodes.disabled}/>
+
+## Start Content
+
+<CodePreview code={accordionCodes.startContent}/>
+
 
 <CompsLinks
   last={{ link: "../avatar", text: "Avatar" }}

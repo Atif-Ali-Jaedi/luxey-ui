@@ -9,12 +9,8 @@ export const Hero = () => (
 			<span className="rounded-full py-2 px-3 !bg-zinc-100 dark:!bg-zinc-800 dark:text-white flex items-center w-max mx-auto md:mx-0 gap-2">
 				<Command size={18} />{" "}
 				<span className="text-zinc-400 dark:text-zinc-600">|</span>
-				<Link
-					to="/blog/Introducing v0.4.0"
-					className="no-underline flex items-center gap-2"
-				>
-					Introducing v0.4.0 🎉 <ArrowRight size={18} />
-				</Link>
+			
+					Introducing v0.5.2 🎉
 			</span>
 			<h1 className="!mt-6">
 				Create Stunning{" "}
