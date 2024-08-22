@@ -1,11 +1,16 @@
 import { Helmet } from "react-helmet-async";
 
 <Helmet>
-  <title>Changelog | LuxeyUI - Elevate your design effortlessly and quickly</title>
-  <meta name="description" content="LuxeyUI - Changelog. Here you can find all the changes that have been made since the library was made ranging from super small updates to large ones."/>
+	<title>
+		{`Changelog | LuxeyUI - Elevate your design effortlessly and quickly`}
+	</title>
+	<meta
+		name="description"
+		content="LuxeyUI - Changelog. Here you can find all the changes that have been made since the library was made ranging from super small updates to large ones."
+	/>
 </Helmet>
 
-<BCrumbs data={["Docs","Changelog"]}/>
+<BCrumbs data={["Docs", "Changelog"]} />
 
 <Article>
 
@@ -13,32 +18,43 @@ import { Helmet } from "react-helmet-async";
 
 All the notable changes are listed here, ranging from super small updates to huge ones.
 
-<Chip>v0.5.0 & v0.5.1</Chip>
-<Time>August 2, 2024</Time>
+<Chip>v0.5.0 - v0.5.3</Chip>
+<Time>August 2, 2024 - August 21, 2024</Time>
 
-## Added 3 new components and a bug fixed 
+## Added 3 new components and some features and couple of bug fixed
 
 ### New components
 
-- **Spinner**: Spinner express an unspecified wait time or display the length of a process.
-- **Circular Progress**: Circular progress indicators are utilized to indicate an undetermined wait period or visually represent the duration of a process.
-- **Image**: The Image component is used to display images with support for fallback.
+-   **Spinner**: Spinner express an unspecified wait time or display the length of a process.
+-   **Circular Progress**: Circular progress indicators are utilized to indicate an undetermined wait period or visually represent the duration of a process.
+-   **Image**: The Image component is used to display images with support for fallback.
 
-### Bug fix 
+### Bug fix
 
-- **Skeleton**: It now has full functionality with the `data-load` attribute.
+-   **Skeleton**: It now has full functionality with the `data-load` attribute.
+-   **Accordion**: Completely reworked and added features such as variants, disability, toggling, etc.
+-   **Avatar**: Completely reworked and now it has full functionality with all the necessary features.
+-   Removed a typo in `tailwind.config.js` where because of that the divider color does not work.
+
+```diff
++ divider: "hsla(var(--layout-divider))",
+- divider: "hslaa(var(--layout-divider))",
+```
+
+-   Changed the divider color, `bg-base-default` to `bg-layout-divider`.
+-   Added `cursor-pointer` in the Switch component.
 
 <Chip>v0.4.2</Chip>
 <Time>July 26, 2024</Time>
 
 ## Updated the Progress and Button component
 
-- **Button**:
-    - Fixed the sizes.
-    - Fixed an issue where the `radius-` classes does not work when `size-` classes are applied. 
-    - The ripple effect can be disabled using the `data-disable-ripple` attribute with the value `true`.
-    - The default animation can be disabled using the `data-disable-animation` attribute.
-- **Progress**: Changed the stripped gradient opacity when using transparent background, from `rgba(0 0 0 / 0.1)` to `rgba(0 0 0 / 0.175)`.
+-   **Button**:
+    -   Fixed the sizes.
+    -   Fixed an issue where the `radius-` classes does not work when `size-` classes are applied.
+    -   The ripple effect can be disabled using the `data-disable-ripple` attribute with the value `true`.
+    -   The default animation can be disabled using the `data-disable-animation` attribute.
+-   **Progress**: Changed the stripped gradient opacity when using transparent background, from `rgba(0 0 0 / 0.1)` to `rgba(0 0 0 / 0.175)`.
 
 <Chip>v0.4.0 & v0.4.1</Chip>
 <Time>July 14, 2024</Time>
@@ -49,26 +65,25 @@ This was a small update. For more details, please visit [Introducing LuxeyUI v0.
 
 ### New Components
 
-- **Progress**: Visualize progress with ease.
-- **Scroll Shadow**: Add elegant shadows while scrolling.
-- **KBD**: Display keyboard keys stylishly.
-- **Checkbox Group**: Manage groups of checkboxes efficiently.
+-   **Progress**: Visualize progress with ease.
+-   **Scroll Shadow**: Add elegant shadows while scrolling.
+-   **KBD**: Display keyboard keys stylishly.
+-   **Checkbox Group**: Manage groups of checkboxes efficiently.
 
 ### Bug Fixes
 
-- **Radio Group**: Improved readability by adjusting `radio-group-label` color from `text-foreground/70` to `text-default-700`.
-- **Progress**: Solved an specificity issue caused by the css `:not()` selector, <code className="code !whitespace-pre-wrap !inline">&:not(&[data-indeterminate]) > .track</code> to `& > .track`.
-
+-   **Radio Group**: Improved readability by adjusting `radio-group-label` color from `text-foreground/70` to `text-default-700`.
+-   **Progress**: Solved an specificity issue caused by the css `:not()` selector, <code className="code !whitespace-pre-wrap !inline">&:not(&[data-indeterminate]) > .track</code> to `& > .track`.
 
 <Chip>v0.3.3</Chip>
 <Time>July 10, 2024</Time>
 
 ## Updated Input component Again
 
-I've made some errors in the last update, so I had to release this one. 
+I've made some errors in the last update, so I had to release this one.
 
- - Added transparent background instead of just solid background, `bg-layout-bg → bg-transparent`.
- - Added a gap between the content before / after the `input`, inside `inner-wrapper`, `gap-px → gap-1.5`.
+-   Added transparent background instead of just solid background, `bg-layout-bg → bg-transparent`.
+-   Added a gap between the content before / after the `input`, inside `inner-wrapper`, `gap-px → gap-1.5`.
 
 <Chip>v0.3.2</Chip>
 <Time>July 10, 2024</Time>
@@ -77,12 +92,12 @@ I've made some errors in the last update, so I had to release this one.
 
 I've done the following things with this component:
 
- - Adjusted the border width, `2.5px → 2px`
- - Adjusted the radius for `sizes` & `radiuses` 
- - Added the `helper-wrapper`
- - Added the `description` & `error-msg` for `helper-wrapper`
- - Added validation for the input to display error only when needed. 
- - Fixed and issue higher the colours of the borders doesn't appear on focus because of the specificity issue.
+-   Adjusted the border width, `2.5px → 2px`
+-   Adjusted the radius for `sizes` & `radiuses`
+-   Added the `helper-wrapper`
+-   Added the `description` & `error-msg` for `helper-wrapper`
+-   Added validation for the input to display error only when needed.
+-   Fixed and issue higher the colours of the borders doesn't appear on focus because of the specificity issue.
 
 <Chip>v0.3.1</Chip>
 <Time>June 30, 2024</Time>
@@ -91,11 +106,11 @@ I've done the following things with this component:
 
 This was a huge update. I've added so many things and redesigned the entire website. For full details, please visit [Introducing LuxeyUI v0.3.0](http://localhost:5173/blog/Introducing%20v0.3.0).
 
-- **Dark Mode**: After a long time I finally added dark mode. 
-- **Theming**: The ability to customize the original theme colors within your css by using css variables. 
-- **Better Customization**: Now, it's a lot easier to customize the components. 
-- **Input**: Added the most requested component "input".
-- **Components**: Fixed the badge and the button component. Also remade entirely the card and the textarea component and Adjusted all the components for darkmode. 
+-   **Dark Mode**: After a long time I finally added dark mode.
+-   **Theming**: The ability to customize the original theme colors within your css by using css variables.
+-   **Better Customization**: Now, it's a lot easier to customize the components.
+-   **Input**: Added the most requested component "input".
+-   **Components**: Fixed the badge and the button component. Also remade entirely the card and the textarea component and Adjusted all the components for darkmode.
 
 <Chip>v0.2.1</Chip>
 <Time>February 21, 2024</Time>
@@ -106,42 +121,43 @@ It was a huge update. Although I've added only 5 components, and fixed 2 compone
 
 ### Added
 
-- **Accordion**: A type of menu that displays a list of headers stacked on top of one another. When clicked on, these headers will either reveal or hide associated content.
-- **Card**: A container for text, photos and actions in the context of a single subject.
-- **Checkbox**: Checkboxes are controls that allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
-- **Skeleton**: Skeleton is a placeholder to show a loading state and the expected shape of a component.
-- **Textarea**: A multi-line input for writing text.
+-   **Accordion**: A type of menu that displays a list of headers stacked on top of one another. When clicked on, these headers will either reveal or hide associated content.
+-   **Card**: A container for text, photos and actions in the context of a single subject.
+-   **Checkbox**: Checkboxes are controls that allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
+-   **Skeleton**: Skeleton is a placeholder to show a loading state and the expected shape of a component.
+-   **Textarea**: A multi-line input for writing text.
 
 ### Fixed
 
-- **Avatar**: Fixed some issues.
-- **Chip**: Fixed the sizing issue due to the wrong calculation of the width of the chip.
+-   **Avatar**: Fixed some issues.
+-   **Chip**: Fixed the sizing issue due to the wrong calculation of the width of the chip.
 
 <Chip>v0.1.0</Chip>
 <Time>January 5, 2024</Time>
 
 ## Improved collections & more
+
 This was a medium update, neither too big nor too small. There was some issues with some components but will be fixed later. Here's what I've added:
 
-- **Badge**: Badge is used as a status descriptor for especially avatars or icons.
-- **Button**: Button allows users to perform actions and choose with a single tap or more.
-- **Chip**: A small block to display important informations.
-- **Code**: A component which is used for displaying an inline code.
-- **Divider**: A separator for contents.
-- **Link**: Link component is styled to resemble a hyperlink for navigating between pages.
-- **Radio**: Radio buttons—where only one of the buttons can be checked or selected.
-- **Switch**: Switch is used to toggle between checked and not checked.
-- **User**: Display user information with avatar and name and description.
+-   **Badge**: Badge is used as a status descriptor for especially avatars or icons.
+-   **Button**: Button allows users to perform actions and choose with a single tap or more.
+-   **Chip**: A small block to display important informations.
+-   **Code**: A component which is used for displaying an inline code.
+-   **Divider**: A separator for contents.
+-   **Link**: Link component is styled to resemble a hyperlink for navigating between pages.
+-   **Radio**: Radio buttons—where only one of the buttons can be checked or selected.
+-   **Switch**: Switch is used to toggle between checked and not checked.
+-   **User**: Display user information with avatar and name and description.
 
 <Chip>v0.0.1</Chip>
 <Time>December 29, 2023</Time>
 
 ## First testing
 
-There wasn't much, It was just a simple test. I had added: 
+There wasn't much, It was just a simple test. I had added:
 
-- **Theme**: A theme is web design manages the front-end design, establishing the overall appearance and functionality by managing its front-end design. Themes determine all design components: page layouts, backgrounds, color palettes, headers and footers, positioning, sizing, and typography.
-- **Avatar**: The Avatar is used to represent a user's profile picture, initial or fallback icon.
+-   **Theme**: A theme is web design manages the front-end design, establishing the overall appearance and functionality by managing its front-end design. Themes determine all design components: page layouts, backgrounds, color palettes, headers and footers, positioning, sizing, and typography.
+-   **Avatar**: The Avatar is used to represent a user's profile picture, initial or fallback icon.
 
 <CompsLinks last={{ link: "../custom-variants", text: "Custom Variants" }} />
 

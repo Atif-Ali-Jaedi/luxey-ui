@@ -10,59 +10,78 @@ Accordion is a type of menu that displays a list of headers stacked on top of on
 
 ## Slots
 
-- **accordion**: The container of the `accordion-item`.
-- **accordion-item**: The accordion item wrapper. 
-- **heading**: The accordion item heading. It contains the indicator and the title.
-- **trigger**: The button that open/close the accordion item.
-- **title-wrapper**: The wrapper of the title and subtitle.
-- **title**: The accordion item title.
-- **subtitle**: The accordion item subtitle.
-- **start-content**: The content before the accordion item.
-- **indicator**: The element that indicates the open/close state of the accordion item.
-- **content**: The accordion item content.
+-   **accordion**: The container of the `accordion-item`.
+-   **accordion-item**: The accordion item wrapper.
+-   **heading**: The accordion item heading. It contains the indicator and the title.
+-   **trigger**: The button that open/close the accordion item.
+-   **title-wrapper**: The wrapper of the title and subtitle.
+-   **title**: The accordion item title.
+-   **subtitle**: The accordion item subtitle.
+-   **start-content**: The content before the accordion item.
+-   **indicator**: The element that indicates the open/close state of the accordion item.
+-   **content**: The accordion item content.
 
 > **Note**: The accordion itself hasn't been made to work if it has nested accordion(s) yet.
 
-## Usage 
+## Usage
 
-<CodePreview code={accordionCodes.usage}/>
+<CodePreview code={accordionCodes.usage} />
 
-## With Subtitle 
+## With Subtitle
 
-<CodePreview code={accordionCodes.withSubtitle}/>
+<CodePreview code={accordionCodes.withSubtitle} />
 
 ## Expand Single Items
 
 If you set the `data-selection-mode` to `single`, then the `Accordion` will allow single item to be expanded at once.
 
-<CodePreview code={accordionCodes.expandSingleItems}/>
+<CodePreview code={accordionCodes.expandSingleItems} />
 
 ## Compact
 
 If you set the `data-compact` attribute, the `Accordion` will be displayed in a compact style.
 
-<CodePreview code={accordionCodes.compact}/>
+<CodePreview code={accordionCodes.compact} />
+
+## Variants
+
+Accordion has 4 variants: `light`, `shadow`, `bordered` and `splitted`.
+
+### Light Variant
+
+<CodePreview code={accordionCodes.variants.light} />
+
+### Shadow Variant
+
+<CodePreview code={accordionCodes.variants.shadow} />
+
+### Bordered Variant
+
+<CodePreview code={accordionCodes.variants.bordered} />
+
+### Splitted Variant
+
+<CodePreview code={accordionCodes.variants.splitted} />
 
 ## Default expanded items
 
 If you set the `data-open` attribute to `true`, those items will be expanded by default.
 
-<CodePreview code={accordionCodes.defaultExpandedItems}/>
+<CodePreview code={accordionCodes.defaultExpandedItems} />
 
 ## Disabled Items
 
 If you set the `data-disabled` attribute, the `accordion-item` will be disabled.
 
-<CodePreview code={accordionCodes.disabled}/>
+<CodePreview code={accordionCodes.disabled} />
 
 ## Start Content
 
-<CodePreview code={accordionCodes.startContent}/>
-
+<CodePreview code={accordionCodes.startContent} />
 
 <CompsLinks
-  last={{ link: "../avatar", text: "Avatar" }}
-  next={{ link: "../badge", text: "Badge" }}
+	last={{ link: "../avatar", text: "Avatar" }}
+	next={{ link: "../badge", text: "Badge" }}
 />
 
 </Article>

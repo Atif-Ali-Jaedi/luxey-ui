@@ -10,7 +10,9 @@ The Avatar is used to represent a user's profile picture, initial or fallback ic
 
 ## Usage
 
-<CodePreview code={avatarCodes.default} />
+<CodePreview code={avatarCodes.usage} />
+
+> **Note**: you can disable the loading animation using the `data-disable-animation` attribute.
 
 ## Sizes
 
@@ -20,9 +22,9 @@ The Avatar is used to represent a user's profile picture, initial or fallback ic
 
 <CodePreview code={avatarCodes.disabled} />
 
-## Outlined with Colors
+## Bordered with Colors
 
-<CodePreview code={avatarCodes.outlinedWithColors} />
+<CodePreview code={avatarCodes.borderedWithColors} />
 
 ## Radius
 
@@ -30,39 +32,54 @@ The Avatar is used to represent a user's profile picture, initial or fallback ic
 
 ## Avatar Fallbacks
 
-If the `src` is not passed or it's empty there are 3 fallbacks.
+If the `src` is not passed or it's empty there are 32fallbacks.
 
-- If there is the `alt` attribute, it will be used.
-- If there is nothing, a default fallback icon is used.
-- To customize the fallback, you can you svgs, images or text inside the `data-fallback` attribute.
+-   If there is the `alt` attribute, it will be used as the name of the avatar.
+-   If there is neither `src` nor `alt` attribute, a default icon will be used.
+
+If the `data-show-fallback="true"` is not passed, the fallbacks will not be displayed.
 
 <CodePreview code={avatarCodes.fallbacks} />
 
-## Avatar group
+### Custom Fallback
+
+To customize the dault fallback icon, use the `<div class-"fallback"></div>` and your icon inside.
+
+<CodePreview code={avatarCodes.customFallback} />
+
+## Avatar Group
 
 <CodePreview code={avatarCodes.group} />
 
-## Group disabled
+> **Note**: If you set the `tabindex` attribute, it makes the avatar focusable for keyboard navigation and will add the focus ring when focused.
+
+### Group Disabled
 
 <CodePreview code={avatarCodes.groupDisabled} />
 
-## Group max count
+### Group Max Count
 
 You can limit the number of avatars displayed by passing the `data-max` attribute and set the value as your desire.
 
 <CodePreview code={avatarCodes.groupMaxCount} />
 
-## Group total count
+### Group Total Count
 
 You can display the total number of avatars by passing the `data-total` attribute and set the value as your desire.
 
 <CodePreview code={avatarCodes.groupTotalCount} />
 
-## Group custom count
+### Group Custom Count
 
 You can also customize the count displayed when the `data-total` attribute is passed using the `data-total-count-child` and the `data-total-count-classnames` attributes.
 
 <CodePreview code={avatarCodes.groupCustomCount} />
+
+### Group Grid
+
+By passing the `data-grid` attribute to the `avatar-group` element, the avatars will be displayed in a grid layout.
+
+<CodePreview code={avatarCodes.groupGrid} />
 
 <CompsLinks next={{ link: "../accordion", text: "Accordion" }} />
 

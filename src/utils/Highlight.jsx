@@ -1,13 +1,14 @@
-import { useEffect, useRef } from "react";
-import Prism from "prismjs";
 import { Button, Tooltip } from "@/components";
 import { Copy } from "lucide-react";
+import Prism from "prismjs";
+import { useEffect, useRef } from "react";
 
-import "prismjs/plugins/line-numbers/prism-line-numbers";
-import "prismjs/plugins/match-braces/prism-match-braces";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-diff";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-bash";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+import "prismjs/plugins/match-braces/prism-match-braces";
 
 const Highlight = ({
 	language,
@@ -15,7 +16,7 @@ const Highlight = ({
 	showLineNumbers,
 	disableCopyBtn,
 	className,
-	header
+	header,
 }) => {
 	const codeRef = useRef(null);
 
@@ -34,15 +35,15 @@ const Highlight = ({
 			{header && (
 				<header className="flex items-center gap-4 rounded-t-xl bg-[#353742] px-4">
 					<div className="flex items-center gap-2">
-						{[1, 2, 3].map(i => (
+						{[1, 2, 3].map((i) => (
 							<div
 								key={i}
 								className={`size-3 rounded-full ${
 									i == 1
 										? "bg-red-400"
 										: i == 2
-										? "bg-yellow-400"
-										: "bg-green-400"
+											? "bg-yellow-400"
+											: "bg-green-400"
 								}`}
 							></div>
 						))}
@@ -53,14 +54,14 @@ const Highlight = ({
 								header.fileType === "html"
 									? "html5"
 									: header.fileType === "css"
-									? "css3"
-									: header.fileType
+										? "css3"
+										: header.fileType
 							}/${
 								header.fileType === "html"
 									? "html5"
 									: header.fileType === "css"
-									? "css3"
-									: header.fileType
+										? "css3"
+										: header.fileType
 							}-original.svg`}
 							className="w-4 !my-0"
 						/>
